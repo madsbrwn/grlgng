@@ -14,6 +14,7 @@
 		01A67AB42159BE41004C8EF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01A67AB32159BE41004C8EF4 /* Assets.xcassets */; };
 		01A67AB72159BE41004C8EF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01A67AB52159BE41004C8EF4 /* LaunchScreen.storyboard */; };
 		064B3B059FEE1E7D999463D0 /* Pods_Handy_Hiker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 133789E844A8A67524828322 /* Pods_Handy_Hiker.framework */; };
+		36F7D2B521641E9200588FC2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 36F7D2B421641E9200588FC2 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		01A67AB62159BE41004C8EF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01A67AB82159BE41004C8EF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		133789E844A8A67524828322 /* Pods_Handy_Hiker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Handy_Hiker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		36F7D2B421641E9200588FC2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Handy Hiker/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		AE155ECBC9947682698819C0 /* Pods-Handy Hiker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Handy Hiker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Handy Hiker/Pods-Handy Hiker.release.xcconfig"; sourceTree = "<group>"; };
 		D97DC308F195D590689A9D96 /* Pods-Handy Hiker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Handy Hiker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Handy Hiker/Pods-Handy Hiker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,6 +65,7 @@
 		01A67AA92159BE3C004C8EF4 /* Handy Hiker */ = {
 			isa = PBXGroup;
 			children = (
+				36F7D2B421641E9200588FC2 /* GoogleService-Info.plist */,
 				01A67AAA2159BE3C004C8EF4 /* AppDelegate.swift */,
 				01A67AAC2159BE3C004C8EF4 /* FirstViewController.swift */,
 				01A67AAE2159BE3C004C8EF4 /* SecondViewController.swift */,
@@ -152,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01A67AB72159BE41004C8EF4 /* LaunchScreen.storyboard in Resources */,
+				36F7D2B521641E9200588FC2 /* GoogleService-Info.plist in Resources */,
 				01A67AB42159BE41004C8EF4 /* Assets.xcassets in Resources */,
 				01A67AB22159BE3C004C8EF4 /* Main.storyboard in Resources */,
 			);
