@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		01A67AAB2159BE3C004C8EF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A67AAA2159BE3C004C8EF4 /* AppDelegate.swift */; };
-		01A67AAD2159BE3C004C8EF4 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A67AAC2159BE3C004C8EF4 /* FirstViewController.swift */; };
-		01A67AAF2159BE3C004C8EF4 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A67AAE2159BE3C004C8EF4 /* SecondViewController.swift */; };
+		01A67AAD2159BE3C004C8EF4 /* HikesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A67AAC2159BE3C004C8EF4 /* HikesController.swift */; };
+		01A67AAF2159BE3C004C8EF4 /* SavedHikesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A67AAE2159BE3C004C8EF4 /* SavedHikesController.swift */; };
 		01A67AB22159BE3C004C8EF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01A67AB02159BE3C004C8EF4 /* Main.storyboard */; };
 		01A67AB42159BE41004C8EF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01A67AB32159BE41004C8EF4 /* Assets.xcassets */; };
 		01A67AB72159BE41004C8EF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01A67AB52159BE41004C8EF4 /* LaunchScreen.storyboard */; };
+		01F063A72166BEB600648C11 /* HikeInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F063A62166BEB600648C11 /* HikeInfoController.swift */; };
+		01F063A92166BFF700648C11 /* YourInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F063A82166BFF700648C11 /* YourInfoController.swift */; };
 		064B3B059FEE1E7D999463D0 /* Pods_Handy_Hiker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 133789E844A8A67524828322 /* Pods_Handy_Hiker.framework */; };
 		36F7D2B521641E9200588FC2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 36F7D2B421641E9200588FC2 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
@@ -20,12 +22,14 @@
 /* Begin PBXFileReference section */
 		01A67AA72159BE3C004C8EF4 /* Handy Hiker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Handy Hiker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01A67AAA2159BE3C004C8EF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		01A67AAC2159BE3C004C8EF4 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		01A67AAE2159BE3C004C8EF4 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		01A67AAC2159BE3C004C8EF4 /* HikesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HikesController.swift; sourceTree = "<group>"; };
+		01A67AAE2159BE3C004C8EF4 /* SavedHikesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedHikesController.swift; sourceTree = "<group>"; };
 		01A67AB12159BE3C004C8EF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		01A67AB32159BE41004C8EF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01A67AB62159BE41004C8EF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01A67AB82159BE41004C8EF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01F063A62166BEB600648C11 /* HikeInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HikeInfoController.swift; sourceTree = "<group>"; };
+		01F063A82166BFF700648C11 /* YourInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourInfoController.swift; sourceTree = "<group>"; };
 		133789E844A8A67524828322 /* Pods_Handy_Hiker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Handy_Hiker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		36F7D2B421641E9200588FC2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Handy Hiker/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		AE155ECBC9947682698819C0 /* Pods-Handy Hiker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Handy Hiker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Handy Hiker/Pods-Handy Hiker.release.xcconfig"; sourceTree = "<group>"; };
@@ -67,8 +71,10 @@
 			children = (
 				36F7D2B421641E9200588FC2 /* GoogleService-Info.plist */,
 				01A67AAA2159BE3C004C8EF4 /* AppDelegate.swift */,
-				01A67AAC2159BE3C004C8EF4 /* FirstViewController.swift */,
-				01A67AAE2159BE3C004C8EF4 /* SecondViewController.swift */,
+				01A67AAC2159BE3C004C8EF4 /* HikesController.swift */,
+				01A67AAE2159BE3C004C8EF4 /* SavedHikesController.swift */,
+				01F063A62166BEB600648C11 /* HikeInfoController.swift */,
+				01F063A82166BFF700648C11 /* YourInfoController.swift */,
 				01A67AB02159BE3C004C8EF4 /* Main.storyboard */,
 				01A67AB32159BE41004C8EF4 /* Assets.xcassets */,
 				01A67AB52159BE41004C8EF4 /* LaunchScreen.storyboard */,
@@ -211,9 +217,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01A67AAF2159BE3C004C8EF4 /* SecondViewController.swift in Sources */,
+				01F063A92166BFF700648C11 /* YourInfoController.swift in Sources */,
+				01F063A72166BEB600648C11 /* HikeInfoController.swift in Sources */,
+				01A67AAF2159BE3C004C8EF4 /* SavedHikesController.swift in Sources */,
 				01A67AAB2159BE3C004C8EF4 /* AppDelegate.swift in Sources */,
-				01A67AAD2159BE3C004C8EF4 /* FirstViewController.swift in Sources */,
+				01A67AAD2159BE3C004C8EF4 /* HikesController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
