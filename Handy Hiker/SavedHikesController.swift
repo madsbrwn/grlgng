@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  SecondViewController.swift
 //  Handy Hiker
 //
 //  Created by Madeline Brown on 9/24/18.
@@ -7,18 +7,12 @@
 //
 
 import UIKit
-import FirebaseCore
-import FirebaseDatabase
 
-class FirstViewController: UIViewController {
-
-    var ref : DatabaseReference?
-    
+class SavedHikesController: UIViewController
+{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        ref = Database.database().reference()
     }
 
 

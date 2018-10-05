@@ -1,20 +1,17 @@
 //
-//  SecondViewController.swift
+//  HikeInfoController.swift
 //  Handy Hiker
 //
-//  Created by Madeline Brown on 9/24/18.
+//  Created by Madeline Brown on 10/4/18.
 //  Copyright © 2018 GrlGng. All rights reserved.
 //
 
 import UIKit
 
-class SecondViewController: UIViewController {
-
+class HikeInfoController:UIViewController
+{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-
 }
-
