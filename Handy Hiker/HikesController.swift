@@ -10,15 +10,18 @@ import UIKit
 import FirebaseCore
 import FirebaseDatabase
 
-class HikesController: UIViewController {
-
-    var ref : DatabaseReference?
+class HikesController: UIViewController
+{
+//    var ref : DatabaseReference?
+    @IBOutlet weak var timeLimitUI: UILabel!
+    var timeLimit : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        timeLimitUI.text = timeLimit
         // Do any additional setup after loading the view, typically from a nib.
         
-        ref = Database.database().reference()
+//        ref = Database.database ().reference()
     }
 }
 
