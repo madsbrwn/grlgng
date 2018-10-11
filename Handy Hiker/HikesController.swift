@@ -19,7 +19,7 @@ class HikesController: UIViewController, UITableViewDataSource
     @IBOutlet weak var timeLimitUI: UILabel!
     var timeLimit : String = ""
     
-    let hikes = ["Mt. Timpanogos", "hike2", "hike3"]
+    let hikes = ["Mt. Timpanogos", "Stewart Falls", "Bridal Veil Falls"]
     let times = ["30 minutes", "1 hour", "2 hours"]
     
     override func viewDidLoad() {
