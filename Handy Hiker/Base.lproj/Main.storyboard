@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -132,6 +133,7 @@
                                             <outlet property="HikeLength" destination="Imp-2P-M1f" id="HWW-rd-FQw"/>
                                             <outlet property="HikeName" destination="CMp-iS-8gA" id="Odd-ht-2Jq"/>
                                             <outlet property="HikeTime" destination="JrC-tO-rGd" id="YwA-Zs-ne6"/>
+                                            <segue destination="EYl-tT-QbZ" kind="show" id="lda-Bg-eWf"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -523,18 +525,19 @@
         </scene>
     </scenes>
     <resources>
-        <image name="clock" width="164" height="128"/>
+        <image name="clock" width="82" height="64"/>
         <image name="first" width="30" height="30"/>
-        <image name="heart_filled" width="32" height="32"/>
-        <image name="heart_outline" width="32" height="32"/>
-        <image name="person_filled" width="32" height="32"/>
-        <image name="person_outline" width="32" height="32"/>
+        <image name="heart_filled" width="25.600000381469727" height="25.600000381469727"/>
+        <image name="heart_outline" width="25.600000381469727" height="25.600000381469727"/>
+        <image name="person_filled" width="25.600000381469727" height="25.600000381469727"/>
+        <image name="person_outline" width="25.600000381469727" height="25.600000381469727"/>
         <image name="second" width="30" height="30"/>
-        <image name="tree_filled" width="32" height="32"/>
-        <image name="tree_outline" width="32" height="32"/>
-        <image name="walking-dude" width="132" height="132"/>
+        <image name="tree_filled" width="25.600000381469727" height="25.600000381469727"/>
+        <image name="tree_outline" width="25.600000381469727" height="25.600000381469727"/>
+        <image name="walking-dude" width="66" height="66"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="lda-Bg-eWf"/>
         <segue reference="95n-m6-N9k"/>
     </inferredMetricsTieBreakers>
 </document>
