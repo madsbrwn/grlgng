@@ -58,6 +58,20 @@ class Model : NSObject
         hikes["Stewart Falls"] = hike
     }
     
+    func getHikesUnderTime(time : Int) -> Dictionary<String,HikeObject>
+    {
+        var filteredHikes : Dictionary = [String : HikeObject]()
+        
+        for (hike, data) in hikes
+        {
+            if (data.time < time)
+            {
+                filteredHikes[hike] = data
+            }
+        }
+        
+        return filteredHikes
+    }
     
     class HikeObject
     {

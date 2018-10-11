@@ -41,7 +41,6 @@ class TimePickerController: UIViewController
             }
             else
             {
-                
                 let timeFormatter = DateFormatter()
 //                if timePicker?.date <
                 timeFormatter.dateFormat = "H hours and mm minutes"
