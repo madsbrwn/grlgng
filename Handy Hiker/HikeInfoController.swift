@@ -10,8 +10,29 @@ import UIKit
 
 class HikeInfoController:UIViewController
 {
+    
+    @IBOutlet weak var UIImage: UIImageView!
+    @IBOutlet weak var UIName: UILabel!
+    @IBOutlet weak var UIDistance: UILabel!
+    @IBOutlet weak var UILocation: UILabel!
+    @IBOutlet weak var UITime: UILabel!
+    @IBOutlet weak var UIDescription: UILabel!
+    
+    var name = ""
+    var time = 0
+    var byuDistance = 0
+    var hikeDistance = 0
+    var hikeDesc = ""
+    var saved = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        UIName.text = name
+        UIDistance.text = String(hikeDistance)
+//        UILocation.text = ???
+        UITime.text = String(time)
+        UIDescription.text = hikeDesc
     }
 }
