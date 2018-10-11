@@ -11,8 +11,12 @@ import UIKit
 class HikeInfoController:UIViewController
 {
     
-    @IBOutlet weak var HikeName: UILabel!
     @IBOutlet weak var UIImage: UIImageView!
+    @IBOutlet weak var UIName: UILabel!
+    @IBOutlet weak var UIDistance: UILabel!
+    @IBOutlet weak var UILocation: UILabel!
+    @IBOutlet weak var UITime: UILabel!
+    @IBOutlet weak var UIDescription: UILabel!
     
     var name = ""
     var time = 0
@@ -25,6 +29,10 @@ class HikeInfoController:UIViewController
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        HikeName.text = name
+        UIName.text = name
+        UIDistance.text = String(hikeDistance)
+//        UILocation.text = ???
+        UITime.text = String(time)
+        UIDescription.text = hikeDesc
     }
 }
