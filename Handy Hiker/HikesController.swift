@@ -28,7 +28,8 @@ class HikesController: UIViewController, UITableViewDataSource
     var timeLimit : String = ""
     
     let hikes = ["Mt. Timpanogos", "Stewart Falls", "Bridal Veil Falls"]
-    let times = ["30 minutes", "1 hour", "2 hours"]
+    let times = ["12 hours", "2 hours", "1 hour"]
+    let lengths = ["12 mi", "6 mi", "1.5 mi"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,8 +52,8 @@ class HikesController: UIViewController, UITableViewDataSource
 
         
         cell.HikeName?.text = hikes[indexPath.row]
-        cell.HikeTime?.text = hikes[indexPath.row]
-        cell.HikeLength?.text = hikes[indexPath.row]
+        cell.HikeTime?.text = times[indexPath.row]
+        cell.HikeLength?.text = lengths[indexPath.row]
         return cell
     }
     
