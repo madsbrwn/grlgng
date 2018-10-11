@@ -10,6 +10,14 @@ import UIKit
 import FirebaseCore
 import FirebaseDatabase
 
+
+class TableViewCell : UITableViewCell {
+    @IBOutlet weak var HikeName: UILabel!
+    
+    @IBOutlet weak var HikeTime: UILabel!
+    @IBOutlet weak var HikeLength: UILabel!
+}
+
 class HikesController: UIViewController, UITableViewDataSource
 {
 //    var ref : DatabaseReference?
@@ -39,11 +47,12 @@ class HikesController: UIViewController, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 //        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TableViewCell
 
         
-        cell.textLabel?.text = hikes[indexPath.row]
-        cell.detailTextLabel?.text = times[indexPath.row]
+        cell.HikeName?.text = hikes[indexPath.row]
+        cell.HikeTime?.text = hikes[indexPath.row]
+        cell.HikeLength?.text = hikes[indexPath.row]
         return cell
     }
     
