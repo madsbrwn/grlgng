@@ -13,6 +13,7 @@
 		01A67AB22159BE3C004C8EF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01A67AB02159BE3C004C8EF4 /* Main.storyboard */; };
 		01A67AB42159BE41004C8EF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01A67AB32159BE41004C8EF4 /* Assets.xcassets */; };
 		01A67AB72159BE41004C8EF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01A67AB52159BE41004C8EF4 /* LaunchScreen.storyboard */; };
+		01EA5FA3216F74B000450195 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EA5FA2216F74B000450195 /* Model.swift */; };
 		01F063A72166BEB600648C11 /* HikeInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F063A62166BEB600648C11 /* HikeInfoController.swift */; };
 		01F063A92166BFF700648C11 /* YourInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F063A82166BFF700648C11 /* YourInfoController.swift */; };
 		01F063AB2166C1D300648C11 /* TimePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F063AA2166C1D300648C11 /* TimePickerController.swift */; };
@@ -29,6 +30,7 @@
 		01A67AB32159BE41004C8EF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01A67AB62159BE41004C8EF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01A67AB82159BE41004C8EF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01EA5FA2216F74B000450195 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		01F063A62166BEB600648C11 /* HikeInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HikeInfoController.swift; sourceTree = "<group>"; };
 		01F063A82166BFF700648C11 /* YourInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourInfoController.swift; sourceTree = "<group>"; };
 		01F063AA2166C1D300648C11 /* TimePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerController.swift; sourceTree = "<group>"; };
@@ -75,13 +77,14 @@
 				01A67AAA2159BE3C004C8EF4 /* AppDelegate.swift */,
 				01F063AA2166C1D300648C11 /* TimePickerController.swift */,
 				01A67AAC2159BE3C004C8EF4 /* HikesController.swift */,
-				01A67AAE2159BE3C004C8EF4 /* SavedHikesController.swift */,
 				01F063A62166BEB600648C11 /* HikeInfoController.swift */,
+				01A67AAE2159BE3C004C8EF4 /* SavedHikesController.swift */,
 				01F063A82166BFF700648C11 /* YourInfoController.swift */,
 				01A67AB02159BE3C004C8EF4 /* Main.storyboard */,
 				01A67AB32159BE41004C8EF4 /* Assets.xcassets */,
 				01A67AB52159BE41004C8EF4 /* LaunchScreen.storyboard */,
 				01A67AB82159BE41004C8EF4 /* Info.plist */,
+				01EA5FA2216F74B000450195 /* Model.swift */,
 			);
 			path = "Handy Hiker";
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01EA5FA3216F74B000450195 /* Model.swift in Sources */,
 				01F063A92166BFF700648C11 /* YourInfoController.swift in Sources */,
 				01F063A72166BEB600648C11 /* HikeInfoController.swift in Sources */,
 				01A67AAF2159BE3C004C8EF4 /* SavedHikesController.swift in Sources */,

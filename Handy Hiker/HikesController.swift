@@ -19,7 +19,7 @@ class HikesController: UIViewController, UITableViewDataSource
     @IBOutlet weak var timeLimitUI: UILabel!
     var timeLimit : String = ""
     
-    let hikes = ["hike1", "hike2", "hike3"]
+    let hikes = ["Mt. Timpanogos", "hike2", "hike3"]
     let times = ["30 minutes", "1 hour", "2 hours"]
     
     override func viewDidLoad() {
@@ -45,6 +45,21 @@ class HikesController: UIViewController, UITableViewDataSource
         cell.textLabel?.text = hikes[indexPath.row]
         cell.detailTextLabel?.text = times[indexPath.row]
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let hikeInfoView = segue.destination as? HikeInfoController
+        {
+            let selectedCell = sender as! UITableViewCell
+            let hike = sharedModel.hikes[(selectedCell.textLabel?.text)!]
+            
+            hikeInfoView.name = hike?.name ?? ""
+            hikeInfoView.time = hike?.time ?? 0
+            hikeInfoView.byuDistance = hike?.distanceFromBYU ?? 0
+            hikeInfoView.hikeDistance = hike?.hikeDistance ?? 0
+            hikeInfoView.hikeDesc = hike?.description ?? ""
+            hikeInfoView.saved = hike?.saved ?? false
+        }
     }
 }
 
