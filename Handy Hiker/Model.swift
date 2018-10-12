@@ -31,7 +31,7 @@ class Model : NSObject
         hike.name = "Bridal Veil Falls"
         hike.baseTime = 60
         hike.milesFromBYU = 8
-        hike.hikeDistance = 2
+        hike.hikeDistance = 1.5
         hike.description = "Bridal Veil Falls is a beautiful natural waterfall in scenic Provo Canyon. It's easily accessible via a trail that connects to the parking lot. The trail to the falls is open year-round, although accessibility may be limited in the winter months due to snow."
         hike.saved = false
         
@@ -77,8 +77,8 @@ class Model : NSObject
     {
         var name : String = ""
         var baseTime : Int = 0
-        var milesFromBYU : Int = 0
-        var hikeDistance : Int = 0
+        var milesFromBYU : Double = 0
+        var hikeDistance : Double = 0
         var description : String = ""
         var saved : Bool = false
     }

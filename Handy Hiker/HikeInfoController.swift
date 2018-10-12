@@ -21,20 +21,38 @@ class HikeInfoController:UIViewController
     
     var name = ""
     var time = 0
-    var byuDistance = 0
-    var hikeDistance = 0
+    var byuDistance : Double = 0
+    var hikeDistance : Double = 0
     var hikeDesc = ""
     var saved = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let hrs = time / 60
-        let min = time % 60
         
         UIName.text = name
         UIDistance.text = String(hikeDistance) + "mi"
-        UITime.text = String(hrs) + " hrs " + String(min) + " min"
+        UITime.text = buildTimeText(time: time)
         HikeInfo.text = hikeDesc
+    }
+    
+    private func buildTimeText(time : Int) -> String
+    {
+        let hrs = time / 60
+        let min = time % 60
+        
+        var str : String = ""
+        
+        if hrs != 0
+        {
+            str += String(hrs) + " hrs "
+        }
+        
+        if min != 0
+        {
+            str += String(min) + " min"
+        }
+        
+        return str
     }
 }
