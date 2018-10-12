@@ -64,8 +64,8 @@ class HikesController: UIViewController, UITableViewDataSource
             let hike = sharedModel.hikes[(selectedCell.HikeName.text)!]
             
             hikeInfoView.name = hike?.name ?? ""
-            hikeInfoView.time = hike?.time ?? 0
-            hikeInfoView.byuDistance = hike?.distanceFromBYU ?? 0
+            hikeInfoView.time = hike?.baseTime ?? 0
+            hikeInfoView.byuDistance = hike?.milesFromBYU ?? 0
             hikeInfoView.hikeDistance = hike?.hikeDistance ?? 0
             hikeInfoView.hikeDesc = hike?.description ?? ""
             hikeInfoView.saved = hike?.saved ?? false

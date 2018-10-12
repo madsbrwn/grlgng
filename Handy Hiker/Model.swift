@@ -19,18 +19,18 @@ class Model : NSObject
     {
         var hike = HikeObject()
         hike.name = "Mt. Timpanogos"
-        hike.time = 0
-        hike.distanceFromBYU = 0
-        hike.hikeDistance = 0
-        hike.description = "fun"
+        hike.baseTime = 200
+        hike.milesFromBYU = 26
+        hike.hikeDistance = 15
+        hike.description = "Mount Timpanogos offers views year round of spectacularly rugged terrain with outstanding glacial cirques, (the round, circular shaped valleys below the peaks) and moraines (masses of rocks, gravel, and sand deposited by glaciers). During the peak wildflower season which is late July and early August, this popular destination is a beautiful place to hike as a multitude of mountain wildflowers burst into colorful full bloom."
         hike.saved = false
         
         hikes["Mt. Timpanogos"] = hike
         
         hike = HikeObject()
         hike.name = "Bridal Veil Falls"
-        hike.time = 0
-        hike.distanceFromBYU = 0
+        hike.baseTime = 0
+        hike.milesFromBYU = 0
         hike.hikeDistance = 0
         hike.description = "fun"
         hike.saved = false
@@ -39,8 +39,8 @@ class Model : NSObject
         
         hike = HikeObject()
         hike.name = "Y Mountain"
-        hike.time = 0
-        hike.distanceFromBYU = 0
+        hike.baseTime = 0
+        hike.milesFromBYU = 0
         hike.hikeDistance = 0
         hike.description = "fun"
         hike.saved = false
@@ -49,8 +49,8 @@ class Model : NSObject
         
         hike = HikeObject()
         hike.name = "Stewart Falls"
-        hike.time = 0
-        hike.distanceFromBYU = 0
+        hike.baseTime = 0
+        hike.milesFromBYU = 0
         hike.hikeDistance = 0
         hike.description = "fun"
         hike.saved = false
@@ -64,7 +64,7 @@ class Model : NSObject
         
         for (hike, data) in hikes
         {
-            if (data.time < time)
+            if (data.baseTime < time)
             {
                 filteredHikes[hike] = data
             }
@@ -76,8 +76,8 @@ class Model : NSObject
     class HikeObject
     {
         var name : String = ""
-        var time : Int = 0
-        var distanceFromBYU : Int = 0
+        var baseTime : Int = 0
+        var milesFromBYU : Int = 0
         var hikeDistance : Int = 0
         var description : String = ""
         var saved : Bool = false
