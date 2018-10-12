@@ -29,11 +29,12 @@ class HikeInfoController:UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let hrs = time / 60
+        let min = time % 60
         
         UIName.text = name
-        UIDistance.text = String(hikeDistance)
-//        UILocation.text = ???
-        UITime.text = String(time)
+        UIDistance.text = String(hikeDistance) + "mi"
+        UITime.text = String(hrs) + " hrs " + String(min) + " min"
         HikeInfo.text = hikeDesc
     }
 }
