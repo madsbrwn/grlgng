@@ -467,7 +467,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="timp" translatesAutoresizingMaskIntoConstraints="NO" id="GKX-U4-lNR">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timp" translatesAutoresizingMaskIntoConstraints="NO" id="GKX-U4-lNR">
                                 <rect key="frame" x="0.0" y="64" width="375" height="122"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="122" id="yaW-EF-WHP"/>
@@ -475,6 +475,11 @@
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GKX-U4-lNR" firstAttribute="leading" secondItem="gHX-8s-UkF" secondAttribute="leading" id="5Tz-5p-TEC"/>
+                            <constraint firstItem="GKX-U4-lNR" firstAttribute="top" secondItem="gHX-8s-UkF" secondAttribute="top" id="G1y-8E-SI6"/>
+                            <constraint firstItem="GKX-U4-lNR" firstAttribute="trailing" secondItem="gHX-8s-UkF" secondAttribute="trailing" id="SdN-Ny-fyj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gHX-8s-UkF"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="oTe-b4-q1h"/>
