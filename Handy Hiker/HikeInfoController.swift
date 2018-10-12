@@ -16,7 +16,8 @@ class HikeInfoController:UIViewController
     @IBOutlet weak var UIDistance: UILabel!
     @IBOutlet weak var UILocation: UILabel!
     @IBOutlet weak var UITime: UILabel!
-    @IBOutlet weak var UIDescription: UILabel!
+    @IBOutlet weak var HikeInfo: UITextView!
+    
     
     var name = ""
     var time = 0
@@ -33,6 +34,6 @@ class HikeInfoController:UIViewController
         UIDistance.text = String(hikeDistance)
 //        UILocation.text = ???
         UITime.text = String(time)
-        UIDescription.text = hikeDesc
+        HikeInfo.text = hikeDesc
     }
 }

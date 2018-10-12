@@ -431,10 +431,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GKX-U4-lNR">
-                                <rect key="frame" x="0.0" y="64" width="375" height="122"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mt. Timpanogos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSl-cs-h6Q" userLabel="HikeNameText">
                                 <rect key="frame" x="16" y="194" width="233" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -463,13 +459,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tTs-35-HXR" userLabel="HikeInfoText">
-                                <rect key="frame" x="16" y="323" width="343" height="219"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" editable="NO" text="fun" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="bvZ-65-Uxq" userLabel="HikeInfoText">
+                                <rect key="frame" x="16" y="308" width="343" height="238"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.3411764706" green="0.61176470589999998" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="timp" translatesAutoresizingMaskIntoConstraints="NO" id="GKX-U4-lNR">
+                                <rect key="frame" x="0.0" y="64" width="375" height="122"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="122" id="yaW-EF-WHP"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="gHX-8s-UkF"/>
@@ -477,7 +480,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="oTe-b4-q1h"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="UIDescription" destination="tTs-35-HXR" id="9hk-iF-IVq"/>
+                        <outlet property="HikeInfo" destination="bvZ-65-Uxq" id="dcc-7h-hN8"/>
                         <outlet property="UIDistance" destination="3UH-ga-WP2" id="soe-PO-Nnd"/>
                         <outlet property="UIImage" destination="GKX-U4-lNR" id="2CQ-Wc-e4f"/>
                         <outlet property="UILocation" destination="2Bm-Cs-Zwv" id="xQ9-rp-lNF"/>
@@ -532,6 +535,7 @@
         <image name="person_filled" width="25.600000381469727" height="25.600000381469727"/>
         <image name="person_outline" width="25.600000381469727" height="25.600000381469727"/>
         <image name="second" width="30" height="30"/>
+        <image name="timp" width="1105.9200439453125" height="737.280029296875"/>
         <image name="tree_filled" width="25.600000381469727" height="25.600000381469727"/>
         <image name="tree_outline" width="25.600000381469727" height="25.600000381469727"/>
         <image name="walking-dude" width="66" height="66"/>
