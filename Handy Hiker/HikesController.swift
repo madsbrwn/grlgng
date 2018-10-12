@@ -60,7 +60,7 @@ class HikesController: UIViewController, UITableViewDataSource
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let hikeInfoView = segue.destination as? HikeInfoController
         {
-            let selectedCell = sender as! UITableViewCell
+            let selectedCell = sender as! TableViewCell
             let hike = sharedModel.hikes[(selectedCell.textLabel?.text)!]
             
             hikeInfoView.name = hike?.name ?? ""
