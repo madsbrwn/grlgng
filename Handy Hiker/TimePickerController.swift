@@ -13,23 +13,13 @@ class TimePickerController: UIViewController
 {
     @IBOutlet var nextBtn: UIButton?
     @IBOutlet var skipBtn: UIButton?
+    @IBOutlet var timePicker: UIDatePicker?
     
-    private var timePicker: UIDatePicker?
+    private var timeLim : TimeInterval?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        timePicker = UIDatePicker()
-        timePicker?.addTarget(self, action: #selector(TimePickerController.timeChanged(timePicker:)), for: .valueChanged)
-        timePicker?.countDownDuration = 0015
     }
-    
-    @objc func timeChanged(timePicker: UIDatePicker)
-    {
-        
-    }
-    
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
@@ -37,15 +27,11 @@ class TimePickerController: UIViewController
         {
             if sender as! UIButton == skipBtn
             {
-                hikesView.timeLimit = "any time"
+                hikesView.minutes = 0
             }
             else
-            {
-                let timeFormatter = DateFormatter()
-//                if timePicker?.date <
-                timeFormatter.dateFormat = "H hours and mm minutes"
- 
-                hikesView.timeLimit = timeFormatter.string(from: timePicker?.date ?? Date.init())
+            {                
+                hikesView.minutes = NSInteger(timePicker?.countDownDuration ?? 0) / 60
             }
         }
     }

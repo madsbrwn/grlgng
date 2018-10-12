@@ -39,9 +39,9 @@ class Model : NSObject
         
         hike = HikeObject()
         hike.name = "Y Mountain"
-        hike.baseTime = 0
-        hike.milesFromBYU = 0
-        hike.hikeDistance = 0
+        hike.baseTime = 60
+        hike.milesFromBYU = 1.7
+        hike.hikeDistance = 2.4
         hike.description = "fun"
         hike.saved = false
         
@@ -58,22 +58,27 @@ class Model : NSObject
         hikes["Stewart Falls"] = hike
     }
     
-    func getHikesUnderTime(time : Int) -> Dictionary<String,HikeObject>
+    public func getHikesUnderTime(time : Int) -> [HikeObject]
     {
-        var filteredHikes : Dictionary = [String : HikeObject]()
+        if (time == 0)
+        {
+            return [HikeObject](hikes.values)
+        }
         
-        for (hike, data) in hikes
+        var filteredHikes : [HikeObject] = []
+        
+        for (_, data) in hikes
         {
             if (data.baseTime < time)
             {
-                filteredHikes[hike] = data
+                filteredHikes.append(data)
             }
         }
         
         return filteredHikes
     }
     
-    class HikeObject
+    public class HikeObject
     {
         var name : String = ""
         var baseTime : Int = 0

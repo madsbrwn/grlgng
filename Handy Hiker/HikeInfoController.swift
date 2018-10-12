@@ -38,6 +38,11 @@ class HikeInfoController:UIViewController
     
     private func buildTimeText(time : Int) -> String
     {
+        if (time == 0)
+        {
+            return "any time"
+        }
+        
         let hrs = time / 60
         let min = time % 60
         
@@ -45,7 +50,7 @@ class HikeInfoController:UIViewController
         
         if hrs != 0
         {
-            str += String(hrs) + " hrs "
+            str += String(hrs) + (hrs == 1 ? " hr " : " hrs ")
         }
         
         if min != 0
