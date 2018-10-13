@@ -19,29 +19,29 @@ class Model : NSObject
     {
         var hike = HikeObject()
         hike.name = "Mt. Timpanogos"
-        hike.time = 0
-        hike.distanceFromBYU = 0
-        hike.hikeDistance = 0
-        hike.description = "fun"
+        hike.baseTime = 720
+        hike.milesFromBYU = 26
+        hike.hikeDistance = 12
+        hike.description = "Mount Timpanogos offers views year round of spectacularly rugged terrain with outstanding glacial cirques, (the round, circular shaped valleys below the peaks) and moraines (masses of rocks, gravel, and sand deposited by glaciers). During the peak wildflower season which is late July and early August, this popular destination is a beautiful place to hike as a multitude of mountain wildflowers burst into colorful full bloom."
         hike.saved = false
         
         hikes["Mt. Timpanogos"] = hike
         
         hike = HikeObject()
         hike.name = "Bridal Veil Falls"
-        hike.time = 0
-        hike.distanceFromBYU = 0
-        hike.hikeDistance = 0
-        hike.description = "fun"
+        hike.baseTime = 60
+        hike.milesFromBYU = 8
+        hike.hikeDistance = 1.5
+        hike.description = "Bridal Veil Falls is a beautiful natural waterfall in scenic Provo Canyon. It's easily accessible via a trail that connects to the parking lot. The trail to the falls is open year-round, although accessibility may be limited in the winter months due to snow."
         hike.saved = false
         
         hikes["Bridal Veil Falls"] = hike
         
         hike = HikeObject()
         hike.name = "Y Mountain"
-        hike.time = 0
-        hike.distanceFromBYU = 0
-        hike.hikeDistance = 0
+        hike.baseTime = 60
+        hike.milesFromBYU = 1.7
+        hike.hikeDistance = 2.4
         hike.description = "fun"
         hike.saved = false
         
@@ -49,36 +49,41 @@ class Model : NSObject
         
         hike = HikeObject()
         hike.name = "Stewart Falls"
-        hike.time = 0
-        hike.distanceFromBYU = 0
-        hike.hikeDistance = 0
-        hike.description = "fun"
+        hike.baseTime = 120
+        hike.milesFromBYU = 16
+        hike.hikeDistance = 6
+        hike.description = "Stewart Falls is one of the most scenic and photogenic waterfalls in northern Utah. It falls in two tiers and is over 200 feet tall. It is a moderate hike through a beautiful forest on the east side of Mt Timpanogos. The trail is well marked and easy to follow. The descent from the ridge down to the base of the falls is quite steep (youngsters should be held in check at that point) but this is a great family hike. Summer is a good time to make the trek, and fall is even better because colored leaves are magnificent. "
         hike.saved = false
         
         hikes["Stewart Falls"] = hike
     }
     
-    func getHikesUnderTime(time : Int) -> Dictionary<String,HikeObject>
+    public func getHikesUnderTime(time : Int) -> [HikeObject]
     {
-        var filteredHikes : Dictionary = [String : HikeObject]()
-        
-        for (hike, data) in hikes
+        if (time == 0)
         {
-            if (data.time < time)
+            return [HikeObject](hikes.values)
+        }
+        
+        var filteredHikes : [HikeObject] = []
+        
+        for (_, data) in hikes
+        {
+            if (data.baseTime < time)
             {
-                filteredHikes[hike] = data
+                filteredHikes.append(data)
             }
         }
         
         return filteredHikes
     }
     
-    class HikeObject
+    public class HikeObject
     {
         var name : String = ""
-        var time : Int = 0
-        var distanceFromBYU : Int = 0
-        var hikeDistance : Int = 0
+        var baseTime : Int = 0
+        var milesFromBYU : Double = 0
+        var hikeDistance : Double = 0
         var description : String = ""
         var saved : Bool = false
     }

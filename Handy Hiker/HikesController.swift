@@ -20,29 +20,31 @@ class TableViewCell : UITableViewCell {
 
 class HikesController: UIViewController, UITableViewDataSource
 {
-//    var ref : DatabaseReference?
-    
-
-
     @IBOutlet weak var timeLimitUI: UILabel!
-    var timeLimit : String = ""
+    var minutes : Int = 0
+    var hikes : [Model.HikeObject] = []
     
-    let hikes = ["Mt. Timpanogos", "Stewart Falls", "Bridal Veil Falls"]
-    let times = ["12 hours", "2 hours", "1 hour"]
-    let lengths = ["12 mi", "6 mi", "1.5 mi"]
+    var names : [String] = []
+    var times : [String] = []
+    var lengths : [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        timeLimitUI.text = timeLimit
-
-
-        // Do any additional setup after loading the view, typically from a nib.
         
-//        ref = Database.database ().reference()
+        hikes = sharedModel.getHikesUnderTime(time: minutes)
+        
+        for (hike) in hikes
+        {
+            names.append(hike.name)
+            times.append(buildTimeText(time: hike.baseTime))
+            lengths.append(String(hike.hikeDistance))
+        }
+        
+        timeLimitUI.text = buildTimeText(time: minutes)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return hikes.count
+        return names.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -51,7 +53,7 @@ class HikesController: UIViewController, UITableViewDataSource
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TableViewCell
 
         
-        cell.HikeName?.text = hikes[indexPath.row]
+        cell.HikeName?.text = names[indexPath.row]
         cell.HikeTime?.text = times[indexPath.row]
         cell.HikeLength?.text = lengths[indexPath.row]
         return cell
@@ -64,12 +66,37 @@ class HikesController: UIViewController, UITableViewDataSource
             let hike = sharedModel.hikes[(selectedCell.textLabel?.text)!]
             
             hikeInfoView.name = hike?.name ?? ""
-            hikeInfoView.time = hike?.time ?? 0
-            hikeInfoView.byuDistance = hike?.distanceFromBYU ?? 0
+            hikeInfoView.time = hike?.baseTime ?? 0
+            hikeInfoView.byuDistance = hike?.milesFromBYU ?? 0
             hikeInfoView.hikeDistance = hike?.hikeDistance ?? 0
             hikeInfoView.hikeDesc = hike?.description ?? ""
             hikeInfoView.saved = hike?.saved ?? false
         }
+    }
+    
+    private func buildTimeText(time : Int) -> String
+    {
+        if (time == 0)
+        {
+            return "any time"
+        }
+        
+        let hrs = time / 60
+        let min = time % 60
+        
+        var str : String = ""
+        
+        if hrs != 0
+        {
+            str += String(hrs) + (hrs == 1 ? " hr " : " hrs ")
+        }
+        
+        if min != 0
+        {
+            str += String(min) + " min"
+        }
+        
+        return str
     }
 }
 
