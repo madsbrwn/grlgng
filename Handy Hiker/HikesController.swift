@@ -20,6 +20,7 @@ class TableViewCell : UITableViewCell {
 
 class HikesController: UIViewController, UITableViewDataSource
 {
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var timeLimitUI: UILabel!
     var minutes : Int = 0
     var hikes : [Model.HikeObject] = []
@@ -58,12 +59,19 @@ class HikesController: UIViewController, UITableViewDataSource
         cell.HikeLength?.text = lengths[indexPath.row]
         return cell
     }
+
+
+    override func viewDidAppear(_ animated: Bool) {
+        if let indexPath = tableView.indexPathForSelectedRow {
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let hikeInfoView = segue.destination as? HikeInfoController
         {
             let selectedCell = sender as! TableViewCell
-            let hike = sharedModel.hikes[(selectedCell.textLabel?.text)!]
+            let hike = sharedModel.hikes[(selectedCell.HikeName?.text)!]
             
             hikeInfoView.name = hike?.name ?? ""
             hikeInfoView.time = hike?.baseTime ?? 0
