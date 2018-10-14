@@ -56,7 +56,7 @@ class HikesController: UIViewController, UITableViewDataSource
         
         cell.HikeName?.text = names[indexPath.row]
         cell.HikeTime?.text = times[indexPath.row]
-        cell.HikeLength?.text = lengths[indexPath.row]
+        cell.HikeLength?.text = lengths[indexPath.row] + " mi"
         return cell
     }
 
