@@ -8,44 +8,29 @@
 
 import UIKit
 
-class YourInfoController: UIViewController
+class YourInfoController: UIViewController, UITextFieldDelegate
 {
-//    @IBOutlet weak var speedPicker: UIPickerView!
-//    @IBOutlet weak var yourName: UITextField!
-
+    @IBOutlet weak var yourName: UITextField!
+    @IBOutlet weak var hikeSpeed: UISlider!
     
-    let speeds = ["Slow", "Medium", "Fast"]
+    var userInfo : UserInfo = sharedModel.userInfo
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        hikeSpeed.setValue(userInfo.getSpeed(), animated: true)
+        
+        yourName.text = userInfo.getName()
+        yourName.delegate = self
+    }
 
-        
-        
-        
-//        self.speedPicker.delegate = self
-//        self.speedPicker.dataSource = self
-//        yourName.delegate = self
+    @IBAction func endEdit(_ sender: Any) {
+        userInfo.setName(myname: yourName.text!)
+        userInfo.setSpeed(myspeed: hikeSpeed.value)
     }
     
-//    func dismissKeyboard() {
-//        view.endEditing(true)
-//    }
-//
-//    func textFieldShouldReturn(_ yourName: UITextField) -> Bool {
-//        self.view.endEditing(true)
-//        return true
-//    }
-//
-//    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-//        return 1
-//    }
-    
-//    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-//        return speeds.count
-//    }
-//
-//    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-//        return speeds[row]
-//    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
 }

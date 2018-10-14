@@ -25,13 +25,18 @@
                                         <rect key="frame" x="32" y="34" width="67" height="64"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7E-sF-i8B">
-                                        <rect key="frame" x="117" y="56" width="114" height="29"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Your Name" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e6m-Vi-MhC">
+                                        <rect key="frame" x="118" y="51" width="211" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <color key="backgroundColor" red="0.3411764706" green="0.61176470589999998" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="endEdit:" destination="GLt-GL-5GX" eventType="editingDidEnd" id="8KR-7Q-mYc"/>
+                                            <action selector="touchScreen:" destination="GLt-GL-5GX" eventType="touchUpOutside" id="S3W-UX-gOb"/>
+                                        </connections>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.3411764706" green="0.61176470589999998" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -113,6 +118,10 @@
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="efX-M5-mKB" userLabel="Hikes"/>
                     <navigationItem key="navigationItem" title="YOUR INFO" id="gar-eZ-brY"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="hikeSpeed" destination="vFJ-sF-Lkw" id="Hl2-1p-sfX"/>
+                        <outlet property="yourName" destination="e6m-Vi-MhC" id="kTw-3D-phL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="odc-mY-aN2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

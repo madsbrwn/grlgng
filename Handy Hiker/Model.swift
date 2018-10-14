@@ -10,10 +10,37 @@ import Foundation
 
 let sharedModel = Model()
 
+class UserInfo : NSObject
+{
+    var name : String = "Your Name"
+    // speed is represented with floats between 1 and 3 with 3 being fastest speed
+    var speed : Float = 2.0
+    
+    public func getName() -> String
+    {
+        return name
+    }
+    
+    public func setName(myname : String)
+    {
+        name = myname
+    }
+    
+    public func getSpeed() -> Float
+    {
+        return speed
+    }
+    
+    public func setSpeed(myspeed : Float)
+    {
+        speed = myspeed
+    }
+}
+
 class Model : NSObject
 {
     var hikes : Dictionary = [String : HikeObject]()
-    var userInfo : Dictionary = ["Name":"", "Speed":""]
+    var userInfo : UserInfo = UserInfo()
     
     override init()
     {
@@ -77,6 +104,7 @@ class Model : NSObject
         
         return filteredHikes
     }
+    
     
     public class HikeObject
     {
