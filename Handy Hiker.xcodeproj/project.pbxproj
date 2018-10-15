@@ -18,6 +18,11 @@
 		01F063A92166BFF700648C11 /* YourInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F063A82166BFF700648C11 /* YourInfoController.swift */; };
 		01F063AB2166C1D300648C11 /* TimePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F063AA2166C1D300648C11 /* TimePickerController.swift */; };
 		064B3B059FEE1E7D999463D0 /* Pods_Handy_Hiker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 133789E844A8A67524828322 /* Pods_Handy_Hiker.framework */; };
+		3681509F217425C600266CEC /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 3681509E217425C600266CEC /* fonts */; };
+		368150B021742B2D00266CEC /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 368150A221742B2B00266CEC /* Lato-Black.ttf */; };
+		368150B721742B2D00266CEC /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 368150A921742B2C00266CEC /* Lato-Bold.ttf */; };
+		368150B821742B2D00266CEC /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 368150AA21742B2C00266CEC /* Lato-Regular.ttf */; };
+		368150B921742B2D00266CEC /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 368150AB21742B2C00266CEC /* Lato-Light.ttf */; };
 		36F7D2B521641E9200588FC2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 36F7D2B421641E9200588FC2 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +40,11 @@
 		01F063A82166BFF700648C11 /* YourInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourInfoController.swift; sourceTree = "<group>"; };
 		01F063AA2166C1D300648C11 /* TimePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerController.swift; sourceTree = "<group>"; };
 		133789E844A8A67524828322 /* Pods_Handy_Hiker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Handy_Hiker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3681509E217425C600266CEC /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
+		368150A221742B2B00266CEC /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Black.ttf"; path = "fonts/Lato-Black.ttf"; sourceTree = "<group>"; };
+		368150A921742B2C00266CEC /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Bold.ttf"; path = "fonts/Lato-Bold.ttf"; sourceTree = "<group>"; };
+		368150AA21742B2C00266CEC /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Regular.ttf"; path = "fonts/Lato-Regular.ttf"; sourceTree = "<group>"; };
+		368150AB21742B2C00266CEC /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Light.ttf"; path = "fonts/Lato-Light.ttf"; sourceTree = "<group>"; };
 		36F7D2B421641E9200588FC2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Handy Hiker/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		AE155ECBC9947682698819C0 /* Pods-Handy Hiker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Handy Hiker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Handy Hiker/Pods-Handy Hiker.release.xcconfig"; sourceTree = "<group>"; };
 		D97DC308F195D590689A9D96 /* Pods-Handy Hiker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Handy Hiker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Handy Hiker/Pods-Handy Hiker.debug.xcconfig"; sourceTree = "<group>"; };
@@ -55,6 +65,11 @@
 		01A67A9E2159BE3C004C8EF4 = {
 			isa = PBXGroup;
 			children = (
+				368150A221742B2B00266CEC /* Lato-Black.ttf */,
+				368150A921742B2C00266CEC /* Lato-Bold.ttf */,
+				368150AB21742B2C00266CEC /* Lato-Light.ttf */,
+				368150AA21742B2C00266CEC /* Lato-Regular.ttf */,
+				3681509E217425C600266CEC /* fonts */,
 				01A67AA92159BE3C004C8EF4 /* Handy Hiker */,
 				01A67AA82159BE3C004C8EF4 /* Products */,
 				73036C865515F3E1520C0BFF /* Pods */,
@@ -166,9 +181,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				368150B921742B2D00266CEC /* Lato-Light.ttf in Resources */,
+				368150B721742B2D00266CEC /* Lato-Bold.ttf in Resources */,
 				01A67AB72159BE41004C8EF4 /* LaunchScreen.storyboard in Resources */,
+				3681509F217425C600266CEC /* fonts in Resources */,
 				36F7D2B521641E9200588FC2 /* GoogleService-Info.plist in Resources */,
+				368150B021742B2D00266CEC /* Lato-Black.ttf in Resources */,
 				01A67AB42159BE41004C8EF4 /* Assets.xcassets in Resources */,
+				368150B821742B2D00266CEC /* Lato-Regular.ttf in Resources */,
 				01A67AB22159BE3C004C8EF4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
