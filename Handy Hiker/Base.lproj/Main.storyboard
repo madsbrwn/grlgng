@@ -485,7 +485,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="Tjd-QH-w7S" kind="relationship" relationship="viewControllers" id="494-wG-qja"/>
-                        <segue destination="vmB-k6-7gJ" kind="relationship" relationship="viewControllers" id="HgU-jy-73q"/>
                         <segue destination="SN0-xQ-y7O" kind="relationship" relationship="viewControllers" id="ncD-7y-aui"/>
                     </connections>
                 </tabBarController>
@@ -578,6 +577,7 @@
         <!--Saved Navigation-->
         <scene sceneID="9EQ-b7-Jic">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pEY-NY-cuv" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController title="Saved Navigation" id="vmB-k6-7gJ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Saved" image="heart_outline" selectedImage="heart_filled" id="F9q-yJ-POc"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Bge-rV-ov1">
@@ -589,7 +589,6 @@
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="rootViewController" id="hiz-Y3-g6z"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pEY-NY-cuv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1527" y="-9"/>
         </scene>
@@ -627,7 +626,7 @@
         <image name="tree_outline" width="25.600000381469727" height="25.600000381469727"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lda-Bg-eWf"/>
+        <segue reference="t7F-9s-tT3"/>
         <segue reference="95n-m6-N9k"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.3411764706" green="0.61176470589999998" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
