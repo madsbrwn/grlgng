@@ -19,6 +19,9 @@ class TimePickerController: UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        timePicker?.countDownDuration = 0100
+        nextBtn?.layer.cornerRadius = 6
+        nextBtn?.clipsToBounds = true
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
