@@ -32,7 +32,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="SyT-Ga-8mW">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="manavatar" translatesAutoresizingMaskIntoConstraints="NO" id="SyT-Ga-8mW">
                                         <rect key="frame" x="32" y="34" width="67" height="64"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -480,8 +480,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="tintColor" red="0.3411764706" green="0.61176470589999998" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="Tjd-QH-w7S" kind="relationship" relationship="viewControllers" id="494-wG-qja"/>
@@ -613,12 +612,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="avatar" width="974" height="952"/>
         <image name="clock" width="135" height="124"/>
         <image name="first" width="30" height="30"/>
         <image name="heart_filled" width="32" height="32"/>
         <image name="heart_outline" width="32" height="32"/>
         <image name="hiker" width="32" height="32"/>
+        <image name="manavatar" width="323" height="317"/>
         <image name="person_filled" width="32" height="32"/>
         <image name="person_outline" width="32" height="32"/>
         <image name="second" width="30" height="30"/>
