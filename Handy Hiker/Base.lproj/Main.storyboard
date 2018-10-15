@@ -472,10 +472,10 @@
             </objects>
             <point key="canvasLocation" x="356" y="-9"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Custom Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController id="49e-Tb-3d3" customClass="CustomTabBarController" customModule="Handy_Hiker" customModuleProvider="target" sceneMemberID="viewController">
                     <value key="contentSizeForViewInPopover" type="size" width="0.0" height="0.0"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
@@ -626,7 +626,7 @@
         <image name="tree_outline" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lda-Bg-eWf"/>
+        <segue reference="t7F-9s-tT3"/>
         <segue reference="95n-m6-N9k"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.3411764706" green="0.61176470589999998" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

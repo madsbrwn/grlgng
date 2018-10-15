@@ -23,6 +23,7 @@
 		368150B721742B2D00266CEC /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 368150A921742B2C00266CEC /* Lato-Bold.ttf */; };
 		368150B821742B2D00266CEC /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 368150AA21742B2C00266CEC /* Lato-Regular.ttf */; };
 		368150B921742B2D00266CEC /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 368150AB21742B2C00266CEC /* Lato-Light.ttf */; };
+		368150BD2174F50F00266CEC /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368150BC2174F50F00266CEC /* CustomTabBarController.swift */; };
 		36F7D2B521641E9200588FC2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 36F7D2B421641E9200588FC2 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		368150A921742B2C00266CEC /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Bold.ttf"; path = "fonts/Lato-Bold.ttf"; sourceTree = "<group>"; };
 		368150AA21742B2C00266CEC /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Regular.ttf"; path = "fonts/Lato-Regular.ttf"; sourceTree = "<group>"; };
 		368150AB21742B2C00266CEC /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Light.ttf"; path = "fonts/Lato-Light.ttf"; sourceTree = "<group>"; };
+		368150BC2174F50F00266CEC /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		36F7D2B421641E9200588FC2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Handy Hiker/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		AE155ECBC9947682698819C0 /* Pods-Handy Hiker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Handy Hiker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Handy Hiker/Pods-Handy Hiker.release.xcconfig"; sourceTree = "<group>"; };
 		D97DC308F195D590689A9D96 /* Pods-Handy Hiker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Handy Hiker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Handy Hiker/Pods-Handy Hiker.debug.xcconfig"; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				01A67AB52159BE41004C8EF4 /* LaunchScreen.storyboard */,
 				01A67AB82159BE41004C8EF4 /* Info.plist */,
 				01EA5FA2216F74B000450195 /* Model.swift */,
+				368150BC2174F50F00266CEC /* CustomTabBarController.swift */,
 			);
 			path = "Handy Hiker";
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 			files = (
 				01EA5FA3216F74B000450195 /* Model.swift in Sources */,
 				01F063A92166BFF700648C11 /* YourInfoController.swift in Sources */,
+				368150BD2174F50F00266CEC /* CustomTabBarController.swift in Sources */,
 				01F063A72166BEB600648C11 /* HikeInfoController.swift in Sources */,
 				01A67AAF2159BE3C004C8EF4 /* SavedHikesController.swift in Sources */,
 				01A67AAB2159BE3C004C8EF4 /* AppDelegate.swift in Sources */,
