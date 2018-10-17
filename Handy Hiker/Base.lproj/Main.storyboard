@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -492,80 +493,90 @@
             </objects>
             <point key="canvasLocation" x="-2745" y="-9"/>
         </scene>
-        <!--Hike Info-->
+        <!--Hike Detail-->
         <scene sceneID="0mh-6b-L1R">
             <objects>
-                <viewController id="EYl-tT-QbZ" userLabel="Hike Info" customClass="HikeInfoController" customModule="Handy_Hiker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="EYl-tT-QbZ" userLabel="Hike Detail" customClass="HikeDetailController" customModule="Handy_Hiker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hyY-bL-1a1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mt. Timpanogos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSl-cs-h6Q" userLabel="HikeNameText">
-                                <rect key="frame" x="16" y="194" width="233" height="45"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="brq-eS-6dI" userLabel="HeaderView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="271"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="29"/>
-                                <color key="textColor" red="0.13725490200000001" green="0.23921568630000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="000mi" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3UH-ga-WP2" userLabel="HikeLengthText">
-                                <rect key="frame" x="306" y="206" width="53" height="21"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="timp" translatesAutoresizingMaskIntoConstraints="NO" id="GKX-U4-lNR">
+                                        <rect key="frame" x="0.0" y="-5" width="375" height="176"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mt. Timpanogos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSl-cs-h6Q" userLabel="HikeNameText">
+                                        <rect key="frame" x="17" y="177" width="233" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="29"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="eLj-3c-R0j">
+                                        <rect key="frame" x="8" y="225" width="32" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Euq-CZ-GZC" userLabel="TripTimeText">
+                                        <rect key="frame" x="40" y="220" width="231" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hiker" translatesAutoresizingMaskIntoConstraints="NO" id="oob-bg-ezY">
+                                        <rect key="frame" x="290" y="189" width="16" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="000mi" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3UH-ga-WP2" userLabel="HikeLengthText">
+                                        <rect key="frame" x="314" y="189" width="53" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                        <color key="textColor" red="0.3411764706" green="0.61176470589999998" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="car" translatesAutoresizingMaskIntoConstraints="NO" id="VBf-pG-bxX" userLabel="car">
+                                        <rect key="frame" x="284" y="218" width="27" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="000mi" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwg-Xk-Ygp" userLabel="DriveLengthText">
+                                        <rect key="frame" x="314" y="217" width="53" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                        <color key="textColor" red="0.3411764706" green="0.61176470589999998" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.13725490200000001" green="0.23921568630000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nkw-qd-aEh" userLabel="TabBarView" customClass="TabmanScrollingButtonBar" customModule="Handy_Hiker">
+                                <rect key="frame" x="0.0" y="256" width="375" height="362"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
-                                <color key="textColor" red="0.3411764706" green="0.61176470589999998" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wasatch Front" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Bm-Cs-Zwv" userLabel="HikeLocationText">
-                                <rect key="frame" x="16" y="247" width="233" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Euq-CZ-GZC" userLabel="TripTimeText">
-                                <rect key="frame" x="50" y="278" width="309" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" editable="NO" text="fun" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="bvZ-65-Uxq" userLabel="HikeInfoText">
-                                <rect key="frame" x="16" y="308" width="343" height="238"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mAe-4V-dWu">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="362"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                        <connections>
+                                            <segue destination="Bu5-yB-PRo" kind="embed" id="kdw-NG-GFA"/>
+                                        </connections>
+                                    </containerView>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" red="0.3411764706" green="0.61176470589999998" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timp" translatesAutoresizingMaskIntoConstraints="NO" id="GKX-U4-lNR">
-                                <rect key="frame" x="0.0" y="64" width="375" height="122"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="122" id="yaW-EF-WHP"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hiker" translatesAutoresizingMaskIntoConstraints="NO" id="oob-bg-ezY">
-                                <rect key="frame" x="286" y="206" width="16" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="eLj-3c-R0j">
-                                <rect key="frame" x="16" y="284" width="32" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="GKX-U4-lNR" firstAttribute="leading" secondItem="gHX-8s-UkF" secondAttribute="leading" id="5Tz-5p-TEC"/>
-                            <constraint firstItem="GKX-U4-lNR" firstAttribute="top" secondItem="gHX-8s-UkF" secondAttribute="top" id="G1y-8E-SI6"/>
-                            <constraint firstItem="GKX-U4-lNR" firstAttribute="trailing" secondItem="gHX-8s-UkF" secondAttribute="trailing" id="SdN-Ny-fyj"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gHX-8s-UkF"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="oTe-b4-q1h"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="HikeInfo" destination="bvZ-65-Uxq" id="dcc-7h-hN8"/>
                         <outlet property="UIDistance" destination="3UH-ga-WP2" id="soe-PO-Nnd"/>
                         <outlet property="UIImage" destination="GKX-U4-lNR" id="2CQ-Wc-e4f"/>
-                        <outlet property="UILocation" destination="2Bm-Cs-Zwv" id="xQ9-rp-lNF"/>
                         <outlet property="UIName" destination="oSl-cs-h6Q" id="2iU-7M-jVd"/>
                         <outlet property="UITime" destination="Euq-CZ-GZC" id="omh-MW-2nr"/>
                     </connections>
@@ -610,23 +621,78 @@
             </objects>
             <point key="canvasLocation" x="-1527" y="744"/>
         </scene>
+        <!--InfoTabView-->
+        <scene sceneID="HQm-Wi-MqS">
+            <objects>
+                <viewController storyboardIdentifier="ChildViewController1" id="NRJ-CH-YeU" userLabel="InfoTabView" customClass="InfoTabController" customModule="Handy_Hiker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FUr-uc-cXM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" editable="NO" text="fun" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="bvZ-65-Uxq" userLabel="HikeInfoText">
+                                <rect key="frame" x="16" y="381" width="343" height="238"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.3411764706" green="0.61176470589999998" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="J9V-WR-cL9"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fT0-Jg-D6o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1324" y="-9"/>
+        </scene>
+        <!--Map Tab Controller-->
+        <scene sceneID="qkN-Fg-xG8">
+            <objects>
+                <viewController storyboardIdentifier="ChildViewController2" id="ZsE-g8-cA2" customClass="MapTabController" customModule="Handy_Hiker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Afj-9s-k0n">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="REb-RL-7sq"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IjS-NR-2zD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2135" y="-9"/>
+        </scene>
+        <!--TabViewController-->
+        <scene sceneID="FPU-UE-4dd">
+            <objects>
+                <viewController id="Bu5-yB-PRo" userLabel="TabViewController" customClass="TabViewController" customModule="Handy_Hiker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t02-0g-Q3j">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="362"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fJl-RV-gS7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2244" y="-736"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="clock" width="135" height="124"/>
+        <image name="car" width="25.600000381469727" height="25.600000381469727"/>
+        <image name="clock" width="25.600000381469727" height="25.600000381469727"/>
         <image name="first" width="30" height="30"/>
-        <image name="heart_filled" width="32" height="32"/>
-        <image name="heart_outline" width="32" height="32"/>
-        <image name="hiker" width="32" height="32"/>
-        <image name="manavatar" width="323" height="317"/>
-        <image name="person_filled" width="32" height="32"/>
-        <image name="person_outline" width="32" height="32"/>
+        <image name="heart_filled" width="25.600000381469727" height="25.600000381469727"/>
+        <image name="heart_outline" width="25.600000381469727" height="25.600000381469727"/>
+        <image name="hiker" width="25.600000381469727" height="25.600000381469727"/>
+        <image name="manavatar" width="465.60000610351562" height="457"/>
+        <image name="person_filled" width="25.600000381469727" height="25.600000381469727"/>
+        <image name="person_outline" width="25.600000381469727" height="25.600000381469727"/>
         <image name="second" width="30" height="30"/>
-        <image name="timp" width="4608" height="3072"/>
-        <image name="tree_filled" width="32" height="32"/>
-        <image name="tree_outline" width="32" height="32"/>
+        <image name="timp" width="1105.9200439453125" height="737.280029296875"/>
+        <image name="tree_filled" width="25.600000381469727" height="25.600000381469727"/>
+        <image name="tree_outline" width="25.600000381469727" height="25.600000381469727"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="t7F-9s-tT3"/>
+        <segue reference="lda-Bg-eWf"/>
         <segue reference="95n-m6-N9k"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.3411764706" green="0.61176470589999998" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

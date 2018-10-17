@@ -16,7 +16,7 @@ class CustomTabBarController: UITabBarController {
         let selectedColor   = UIColor(red: 87.0/255.0, green: 156.0/255.0, blue: 135.0/255.0, alpha: 1.0)
         
         let appearance = UITabBarItem.appearance(whenContainedInInstancesOf: [CustomTabBarController.self])
-        appearance.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: selectedColor], for: .selected)
+        appearance.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: selectedColor], for: .selected)
         
     }
 
