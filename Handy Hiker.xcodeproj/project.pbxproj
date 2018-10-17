@@ -17,6 +17,7 @@
 		01D5EB162176D12A006FDCF9 /* MapTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D5EB152176D12A006FDCF9 /* MapTabController.swift */; };
 		01D5EB182176E414006FDCF9 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D5EB172176E414006FDCF9 /* TabViewController.swift */; };
 		01D5EB1A2176E71C006FDCF9 /* TransparentNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D5EB192176E71C006FDCF9 /* TransparentNavigationBar.swift */; };
+		01D5EB1D2176EFB7006FDCF9 /* PresetAppearanceConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D5EB1C2176EFB6006FDCF9 /* PresetAppearanceConfigs.swift */; };
 		01EA5FA3216F74B000450195 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EA5FA2216F74B000450195 /* Model.swift */; };
 		01F063A72166BEB600648C11 /* HikeDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F063A62166BEB600648C11 /* HikeDetailController.swift */; };
 		01F063A92166BFF700648C11 /* YourInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F063A82166BFF700648C11 /* YourInfoController.swift */; };
@@ -44,6 +45,7 @@
 		01D5EB152176D12A006FDCF9 /* MapTabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapTabController.swift; sourceTree = "<group>"; };
 		01D5EB172176E414006FDCF9 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		01D5EB192176E71C006FDCF9 /* TransparentNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransparentNavigationBar.swift; sourceTree = "<group>"; };
+		01D5EB1C2176EFB6006FDCF9 /* PresetAppearanceConfigs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresetAppearanceConfigs.swift; sourceTree = "<group>"; };
 		01EA5FA2216F74B000450195 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		01F063A62166BEB600648C11 /* HikeDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HikeDetailController.swift; sourceTree = "<group>"; };
 		01F063A82166BFF700648C11 /* YourInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourInfoController.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				01D5EB172176E414006FDCF9 /* TabViewController.swift */,
 				01D5EB132176CF89006FDCF9 /* InfoTabController.swift */,
 				01D5EB152176D12A006FDCF9 /* MapTabController.swift */,
+				01D5EB1C2176EFB6006FDCF9 /* PresetAppearanceConfigs.swift */,
 				01D5EB192176E71C006FDCF9 /* TransparentNavigationBar.swift */,
 			);
 			path = HikeDetailView;
@@ -272,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01D5EB1D2176EFB7006FDCF9 /* PresetAppearanceConfigs.swift in Sources */,
 				01EA5FA3216F74B000450195 /* Model.swift in Sources */,
 				01F063A92166BFF700648C11 /* YourInfoController.swift in Sources */,
 				01D5EB162176D12A006FDCF9 /* MapTabController.swift in Sources */,

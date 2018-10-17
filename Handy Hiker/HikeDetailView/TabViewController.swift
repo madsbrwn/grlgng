@@ -38,8 +38,12 @@ class TabViewController: TabmanViewController, PageboyViewControllerDataSource {
         
         
         self.bar.location = .top
-        self.bar.appearance?.style.background = .solid(color: UIColor(rgb: 0x579C87))
         
+        self.bar.appearance?.layout.itemDistribution = .centered
+        self.bar.appearance?.style.background = .solid(color: UIColor(rgb: 0x579C87))
+        self.bar.appearance?.indicator.color = UIColor(rgb: 0xffffff)
+        
+        self.bar.appearance = PresetAppearanceConfigs.forStyle(self.bar.style, currentAppearance: self.bar.appearance)
         
 //        addBarButtons()
 //

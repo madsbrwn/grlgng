@@ -168,7 +168,7 @@ public extension TabmanBar {
             layout.interItemSpacing = 20.0
             layout.edgeInset = 16.0
             layout.itemVerticalPadding = 12.0
-            layout.itemDistribution = .leftAligned
+            layout.itemDistribution = .centered
             layout.minimumItemWidth = 44.0
             layout.extendBackgroundEdgeInsets = true
             
