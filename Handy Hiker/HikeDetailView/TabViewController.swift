@@ -32,18 +32,8 @@ class TabViewController: TabmanViewController, PageboyViewControllerDataSource {
         
         self.dataSource = self
         
-        // configure the bar
-        self.bar.items = [Item(title: "Info"),
-                          Item(title: "Map")]
-        
-        
-        self.bar.location = .top
-        
-        self.bar.appearance?.layout.itemDistribution = .centered
-        self.bar.appearance?.style.background = .solid(color: UIColor(rgb: 0x579C87))
-        self.bar.appearance?.indicator.color = UIColor(rgb: 0xffffff)
-        
         self.bar.appearance = PresetAppearanceConfigs.forStyle(self.bar.style, currentAppearance: self.bar.appearance)
+        initializeViewControllers()
         
 //        addBarButtons()
 //
@@ -59,20 +49,18 @@ class TabViewController: TabmanViewController, PageboyViewControllerDataSource {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
-//        segue.destination.transitioningDelegate = self
+        segue.destination.transitioningDelegate = self as? UIViewControllerTransitioningDelegate
         
-//        if let navigationController = segue.destination as? SettingsNavigationController,
+//        if let navigationController = segue.destination as? UINavigationController,
 //            let settingsViewController = navigationController.viewControllers.first as? SettingsViewController {
 //            settingsViewController.tabViewController = self
 //        }
-//
 
-        
-//        // use current gradient as tint
-//        if let navigationController = segue.destination as? UINavigationController,
-//            let navigationBar = navigationController.navigationBar as? TransparentNavigationBar {
-//            navigationBar.tintColor = UIColor(rgb: 0x579C87)
-//        }
+        // use current gradient as tint
+        if let navigationController = segue.destination as? UINavigationController,
+            let navigationBar = navigationController.navigationBar as? TransparentNavigationBar {
+            navigationBar.tintColor = UIColor(rgb: 0x579C87)
+        }
     }
     
     // MARK: Actions
@@ -87,7 +75,7 @@ class TabViewController: TabmanViewController, PageboyViewControllerDataSource {
     
     // MARK: PageboyViewControllerDataSource
 
-    private func initializeViewControllers(count: Int) {
+    private func initializeViewControllers() {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         var viewControllers = [UIViewController]()
         var barItems = [Item]()
@@ -99,7 +87,7 @@ class TabViewController: TabmanViewController, PageboyViewControllerDataSource {
         
         let mapTabController = storyboard.instantiateViewController(withIdentifier: "ChildViewController2") as! MapTabController
         mapTabController.index = 0
-        barItems.append(Item(title: "Info"))
+        barItems.append(Item(title: "Map"))
         viewControllers.append(mapTabController)
         
         bar.items = barItems
