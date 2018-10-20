@@ -10,8 +10,8 @@ import UIKit
 
 class MapTabController: UIViewController {
 
-    @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var promptLabel: UILabel!
+//    @IBOutlet weak var label: UILabel!
+//    @IBOutlet weak var promptLabel: UILabel!
 
     var index: Int?
     
@@ -19,8 +19,8 @@ class MapTabController: UIViewController {
         super.viewDidLoad()
 
         if let index = self.index {
-            self.label.text = "Page " + String(index)
-            self.promptLabel.isHidden = index != 1
+//            self.label.text = "Page " + String(index)
+//            self.promptLabel.isHidden = index != 1
         }
     }
 }

@@ -24,6 +24,7 @@ class TabViewController: TabmanViewController, PageboyViewControllerDataSource {
     var nextBarButton: UIBarButtonItem?
     
     private var viewControllers = [UIViewController]()
+    private var initialized = false
     
     // MARK: Lifecycle
     
@@ -33,37 +34,16 @@ class TabViewController: TabmanViewController, PageboyViewControllerDataSource {
         self.dataSource = self
         
         self.bar.appearance = PresetAppearanceConfigs.forStyle(self.bar.style, currentAppearance: self.bar.appearance)
-        initializeViewControllers()
         
-//        addBarButtons()
-//
-////        bar.style = .custom(type: CustomTabmanBar.self) // uncomment to use CustomTabmanBar as style.
-////        bar.appearance = PresetAppearanceConfigs.forStyle(self.bar.style, currentAppearance: self.bar.appearance)
-//
-//        // updating
-//        updateAppearance(pagePosition: currentPosition?.x ?? 0.0)
-//        updateStatusLabels()
-//        updateBarButtonStates(index: currentIndex ?? 0)
+        let index = 0
+        self.previousBarButton?.isEnabled = index != 0
+        self.nextBarButton?.isEnabled = index != (self.pageCount ?? 0) - 1
         
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        super.prepare(for: segue, sender: sender)
-        segue.destination.transitioningDelegate = self as? UIViewControllerTransitioningDelegate
-        
-//        if let navigationController = segue.destination as? UINavigationController,
-//            let settingsViewController = navigationController.viewControllers.first as? SettingsViewController {
-//            settingsViewController.tabViewController = self
-//        }
-
-        // use current gradient as tint
-        if let navigationController = segue.destination as? UINavigationController,
-            let navigationBar = navigationController.navigationBar as? TransparentNavigationBar {
-            navigationBar.tintColor = UIColor(rgb: 0x579C87)
+        if !self.initialized
+        {
+            initializeViewControllers()
         }
     }
-    
-    // MARK: Actions
     
     @objc func firstPage(_ sender: UIBarButtonItem) {
         scrollToPage(.first, animated: true)
@@ -81,29 +61,73 @@ class TabViewController: TabmanViewController, PageboyViewControllerDataSource {
         var barItems = [Item]()
         
         let infoTabController = storyboard.instantiateViewController(withIdentifier: "ChildViewController1") as! InfoTabController
-        infoTabController.index = 0
+        infoTabController.index = 1
         barItems.append(Item(title: "Info"))
         viewControllers.append(infoTabController)
-        
+
         let mapTabController = storyboard.instantiateViewController(withIdentifier: "ChildViewController2") as! MapTabController
-        mapTabController.index = 0
+        mapTabController.index = 2
         barItems.append(Item(title: "Map"))
         viewControllers.append(mapTabController)
         
         bar.items = barItems
         self.viewControllers = viewControllers
+        self.initialized = true
     }
     
     func numberOfViewControllers(in pageboyViewController: PageboyViewController) -> Int {
-        return viewControllers.count
+        if !self.initialized
+        {
+            initializeViewControllers()
+        }
+        return self.viewControllers.count
     }
     
     func viewController(for pageboyViewController: PageboyViewController, at index: PageboyViewController.PageIndex) -> UIViewController? {
-        return viewControllers[index]
+        return self.viewControllers[index]
     }
     
     func defaultPage(for pageboyViewController: PageboyViewController) -> PageboyViewController.Page? {
         return nil
+    }
+    
+    private var targetIndex: Int?
+    
+    override func pageboyViewController(_ pageboyViewController: PageboyViewController,
+                                        willScrollToPageAt index: Int,
+                                        direction: PageboyViewController.NavigationDirection,
+                                        animated: Bool) {
+        super.pageboyViewController(pageboyViewController,
+                                    willScrollToPageAt: index,
+                                    direction: direction,
+                                    animated: animated)
+        
+        targetIndex = index
+    }
+    
+    override func pageboyViewController(_ pageboyViewController: PageboyViewController,
+                                        didScrollTo position: CGPoint,
+                                        direction: PageboyViewController.NavigationDirection,
+                                        animated: Bool) {
+        super.pageboyViewController(pageboyViewController,
+                                    didScrollTo: position,
+                                    direction: direction,
+                                    animated: animated)
+    }
+    
+    override func pageboyViewController(_ pageboyViewController: PageboyViewController,
+                                        didScrollToPageAt index: Int,
+                                        direction: PageboyViewController.NavigationDirection,
+                                        animated: Bool) {
+        super.pageboyViewController(pageboyViewController,
+                                    didScrollToPageAt: index,
+                                    direction: direction,
+                                    animated: animated)
+        
+        self.previousBarButton?.isEnabled = index != 0
+        self.nextBarButton?.isEnabled = index != (self.pageCount ?? 0) - 1
+        
+        targetIndex = nil
     }
 }
 

@@ -552,7 +552,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.13725490200000001" green="0.23921568630000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nkw-qd-aEh" userLabel="TabBarView" customClass="TabmanScrollingButtonBar" customModule="Handy_Hiker">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nkw-qd-aEh" userLabel="TabBarView">
                                 <rect key="frame" x="0.0" y="279" width="375" height="339"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -624,9 +624,9 @@
         <!--InfoTabView-->
         <scene sceneID="HQm-Wi-MqS">
             <objects>
-                <viewController storyboardIdentifier="ChildViewController1" id="NRJ-CH-YeU" userLabel="InfoTabView" customClass="InfoTabController" customModule="Handy_Hiker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChildViewController1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NRJ-CH-YeU" userLabel="InfoTabView" customClass="InfoTabController" customModule="Handy_Hiker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FUr-uc-cXM">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="347"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" editable="NO" text="fun" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="bvZ-65-Uxq" userLabel="HikeInfoText">
@@ -638,10 +638,9 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="0.89552931729999996" blue="0.93594178569999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="J9V-WR-cL9"/>
                     </view>
-                    <size key="freeformSize" width="375" height="347"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fT0-Jg-D6o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -650,11 +649,11 @@
         <!--Map Tab Controller-->
         <scene sceneID="qkN-Fg-xG8">
             <objects>
-                <viewController storyboardIdentifier="ChildViewController2" id="ZsE-g8-cA2" customClass="MapTabController" customModule="Handy_Hiker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChildViewController2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZsE-g8-cA2" customClass="MapTabController" customModule="Handy_Hiker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Afj-9s-k0n">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="REb-RL-7sq"/>
                     </view>
                 </viewController>
@@ -669,7 +668,7 @@
                     <view key="view" contentMode="scaleToFill" id="t02-0g-Q3j">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="347"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="4qU-W1-8uk"/>
                     </view>
                 </viewController>
