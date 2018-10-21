@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CZPicker
 import FirebaseCore
 import FirebaseDatabase
 
@@ -31,6 +32,7 @@ class HikesController: UIViewController, UITableViewDataSource
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         hikes = sharedModel.getHikesUnderTime(time: minutes)
         
