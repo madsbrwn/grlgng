@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import Tabman
+import Pageboy
 
-class HikeInfoController:UIViewController
+class HikeDetailController:UIViewController
 {
-    
     @IBOutlet weak var UIImage: UIImageView!
     @IBOutlet weak var UIName: UILabel!
     @IBOutlet weak var UIDistance: UILabel!
@@ -18,6 +19,7 @@ class HikeInfoController:UIViewController
     @IBOutlet weak var UITime: UILabel!
     @IBOutlet weak var HikeInfo: UITextView!
     
+    private var viewControllers = [UIViewController]()
     
     var name = ""
     var time = 0
@@ -33,7 +35,9 @@ class HikeInfoController:UIViewController
         UIName.text = name
         UIDistance.text = String(hikeDistance) + "mi"
         UITime.text = buildTimeText(time: time)
-        HikeInfo.text = hikeDesc
+//        HikeInfo.text = hikeDesc
+        
+
     }
     
     private func buildTimeText(time : Int) -> String
