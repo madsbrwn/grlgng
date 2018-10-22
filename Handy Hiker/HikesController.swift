@@ -7,7 +7,8 @@
 //
 
 import UIKit
-import CZPicker
+//import CZPicker
+import YNDropDownMenu
 import FirebaseCore
 import FirebaseDatabase
 
@@ -32,6 +33,9 @@ class HikesController: UIViewController, UITableViewDataSource
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        callHikeFilter()
+        
         
         
         hikes = sharedModel.getHikesUnderTime(time: minutes)
@@ -107,6 +111,37 @@ class HikesController: UIViewController, UITableViewDataSource
         }
         
         return str
+    }
+    
+    func callHikeFilter() {
+        let ZBdropDownViews = Bundle.main.loadNibNamed("HikeFilterView", owner: nil, options: nil) as? [UIView]
+        let FFA409 = UIColor.init(red: 255/255, green: 164/255, blue: 9/255, alpha: 1.0)
+        
+        if let _ZBdropDownViews = ZBdropDownViews {
+            // Inherit YNDropDownView if you want to hideMenu in your dropDownViews
+            let view = YNDropDownMenu(frame: CGRect(x: 0, y: 173, width: UIScreen.main.bounds.size.width, height: 35), dropDownViews: _ZBdropDownViews, dropDownViewTitles: ["Filter", "Sort By"])
+            
+            //view.setImageWhens(normal: [UIImage(named: "HOME_BOX_NORMAL"),UIImage(named: "HOME_COLOR_NORMAL"),UIImage(named: "HOME_DESIGN_NORMAL"),UIImage(named: "HOME_CONCEPT_NORMAL")], selectedTintColorRGB: "FFA409", disabledTintColorRGB: "D3D3D3")
+            
+            
+            view.setLabelColorWhen(normal: .white, selected: FFA409, disabled: .gray)
+            
+            view.setLabelFontWhen(normal: .systemFont(ofSize: 12), selected: .boldSystemFont(ofSize: 12), disabled: .systemFont(ofSize: 12))
+            //            view.setLabel(font: .systemFont(ofSize: 12))
+            
+            view.backgroundBlurEnabled = true
+            //            view.bottomLine.backgroundColor = UIColor.black
+            view.bottomLine.isHidden = false
+            // Add custom blurEffectView
+            let backgroundView = UIView()
+            backgroundView.backgroundColor = .black
+            view.blurEffectView = backgroundView
+            view.blurEffectViewAlpha = 0.7
+            
+            view.setBackgroundColor(color: UIColor(red: 35.0 / 255.0, green: 61.0 / 255.0, blue: 77.0 / 255.0, alpha: 1.0))
+            
+            self.view.addSubview(view)
+        }
     }
 }
 

@@ -227,6 +227,18 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Filter" lineBreakMode="wordWrap" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="416" translatesAutoresizingMaskIntoConstraints="NO" id="y3S-Au-2HO" userLabel="TimeLimitUI">
+                                        <rect key="frame" x="23" y="108" width="214" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9bb-bV-ix5" customClass="YNDropDownMenu">
+                                        <rect key="frame" x="217" y="73" width="150" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.13725490200000001" green="0.23921568630000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.13725490196078433" green="0.23921568627450979" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -678,19 +690,19 @@
         </scene>
     </scenes>
     <resources>
-        <image name="car" width="25.600000381469727" height="25.600000381469727"/>
-        <image name="clock" width="25.600000381469727" height="25.600000381469727"/>
+        <image name="car" width="32" height="32"/>
+        <image name="clock" width="32" height="32"/>
         <image name="first" width="30" height="30"/>
-        <image name="heart_filled" width="25.600000381469727" height="25.600000381469727"/>
-        <image name="heart_outline" width="25.600000381469727" height="25.600000381469727"/>
-        <image name="hiker" width="25.600000381469727" height="25.600000381469727"/>
-        <image name="manavatar" width="465.60000610351562" height="457"/>
-        <image name="person_filled" width="25.600000381469727" height="25.600000381469727"/>
-        <image name="person_outline" width="25.600000381469727" height="25.600000381469727"/>
+        <image name="heart_filled" width="32" height="32"/>
+        <image name="heart_outline" width="32" height="32"/>
+        <image name="hiker" width="32" height="32"/>
+        <image name="manavatar" width="323" height="317"/>
+        <image name="person_filled" width="32" height="32"/>
+        <image name="person_outline" width="32" height="32"/>
         <image name="second" width="30" height="30"/>
-        <image name="timp" width="1105.9200439453125" height="737.280029296875"/>
-        <image name="tree_filled" width="25.600000381469727" height="25.600000381469727"/>
-        <image name="tree_outline" width="25.600000381469727" height="25.600000381469727"/>
+        <image name="timp" width="4608" height="3072"/>
+        <image name="tree_filled" width="32" height="32"/>
+        <image name="tree_outline" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="lda-Bg-eWf"/>

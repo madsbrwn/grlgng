@@ -23,6 +23,8 @@
 		01F063A92166BFF700648C11 /* YourInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F063A82166BFF700648C11 /* YourInfoController.swift */; };
 		01F063AB2166C1D300648C11 /* TimePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F063AA2166C1D300648C11 /* TimePickerController.swift */; };
 		064B3B059FEE1E7D999463D0 /* Pods_Handy_Hiker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 133789E844A8A67524828322 /* Pods_Handy_Hiker.framework */; };
+		360C0056217D6243001A0012 /* HikeFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360C0055217D6243001A0012 /* HikeFilterView.swift */; };
+		360C0058217D632D001A0012 /* HikeFilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360C0057217D632D001A0012 /* HikeFilterView.xib */; };
 		3681509F217425C600266CEC /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 3681509E217425C600266CEC /* fonts */; };
 		368150B021742B2D00266CEC /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 368150A221742B2B00266CEC /* Lato-Black.ttf */; };
 		368150B721742B2D00266CEC /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 368150A921742B2C00266CEC /* Lato-Bold.ttf */; };
@@ -51,6 +53,8 @@
 		01F063A82166BFF700648C11 /* YourInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourInfoController.swift; sourceTree = "<group>"; };
 		01F063AA2166C1D300648C11 /* TimePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerController.swift; sourceTree = "<group>"; };
 		133789E844A8A67524828322 /* Pods_Handy_Hiker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Handy_Hiker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		360C0055217D6243001A0012 /* HikeFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HikeFilterView.swift; sourceTree = "<group>"; };
+		360C0057217D632D001A0012 /* HikeFilterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HikeFilterView.xib; sourceTree = "<group>"; };
 		3681509E217425C600266CEC /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		368150A221742B2B00266CEC /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Black.ttf"; path = "fonts/Lato-Black.ttf"; sourceTree = "<group>"; };
 		368150A921742B2C00266CEC /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Bold.ttf"; path = "fonts/Lato-Bold.ttf"; sourceTree = "<group>"; };
@@ -113,6 +117,8 @@
 				01A67AB82159BE41004C8EF4 /* Info.plist */,
 				01EA5FA2216F74B000450195 /* Model.swift */,
 				368150BC2174F50F00266CEC /* CustomTabBarController.swift */,
+				360C0055217D6243001A0012 /* HikeFilterView.swift */,
+				360C0057217D632D001A0012 /* HikeFilterView.xib */,
 			);
 			path = "Handy Hiker";
 			sourceTree = "<group>";
@@ -210,6 +216,7 @@
 				368150B921742B2D00266CEC /* Lato-Light.ttf in Resources */,
 				368150B721742B2D00266CEC /* Lato-Bold.ttf in Resources */,
 				01A67AB72159BE41004C8EF4 /* LaunchScreen.storyboard in Resources */,
+				360C0058217D632D001A0012 /* HikeFilterView.xib in Resources */,
 				3681509F217425C600266CEC /* fonts in Resources */,
 				36F7D2B521641E9200588FC2 /* GoogleService-Info.plist in Resources */,
 				368150B021742B2D00266CEC /* Lato-Black.ttf in Resources */,
@@ -233,6 +240,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Pageboy/Pageboy.framework",
 				"${BUILT_PRODUCTS_DIR}/Tabman/Tabman.framework",
+				"${BUILT_PRODUCTS_DIR}/YNDropDownMenu/YNDropDownMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -242,6 +250,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pageboy.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Tabman.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YNDropDownMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -278,6 +287,7 @@
 				01D5EB1D2176EFB7006FDCF9 /* PresetAppearanceConfigs.swift in Sources */,
 				01EA5FA3216F74B000450195 /* Model.swift in Sources */,
 				01F063A92166BFF700648C11 /* YourInfoController.swift in Sources */,
+				360C0056217D6243001A0012 /* HikeFilterView.swift in Sources */,
 				01D5EB162176D12A006FDCF9 /* MapTabController.swift in Sources */,
 				01D5EB142176CF89006FDCF9 /* InfoTabController.swift in Sources */,
 				368150BD2174F50F00266CEC /* CustomTabBarController.swift in Sources */,
