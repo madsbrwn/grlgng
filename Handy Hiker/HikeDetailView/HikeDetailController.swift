@@ -23,8 +23,8 @@ class HikeDetailController:UIViewController
         super.viewDidLoad()
         
         UIName.text = hike?.name
-        UIDistance.text = String(hike?.hikeDistance ?? 0.0) + "mi"
-        UITime.text = buildTimeText(time: hike?.baseTime ?? 0)
+        UIDistance.text = String(hike?.trailLength ?? 0.0) + "mi"
+        UITime.text = buildTimeText(time: hike?.totalMinutes ?? 0)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)

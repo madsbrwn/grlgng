@@ -43,8 +43,8 @@ class HikesController: UIViewController, UITableViewDataSource
         for (hike) in hikes
         {
             names.append(hike.name)
-            times.append(buildTimeText(time: hike.baseTime))
-            lengths.append(String(hike.hikeDistance))
+            times.append(buildTimeText(time: hike.totalMinutes))
+            lengths.append(String(hike.trailLength))
         }
         
         timeLimitUI.text = buildTimeText(time: minutes)

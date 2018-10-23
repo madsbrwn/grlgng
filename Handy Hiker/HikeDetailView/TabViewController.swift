@@ -71,7 +71,9 @@ class TabViewController: TabmanViewController, PageboyViewControllerDataSource {
         viewControllers.append(infoTabController)
 
         let mapTabController = storyboard.instantiateViewController(withIdentifier: "ChildViewController2") as! MapTabController
-        mapTabController.index = 2
+//        mapTabController.index = 2
+        mapTabController.coords = (selectedHike?.coords)!
+        mapTabController.hikeName = (selectedHike?.name)!
         barItems.append(Item(title: "Map"))
         viewControllers.append(mapTabController)
         

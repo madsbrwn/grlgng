@@ -9,34 +9,31 @@
 import UIKit
 import GoogleMaps
 
-class MapTabController: UIViewController {
-
-//    @IBOutlet weak var label: UILabel!
-//    @IBOutlet weak var promptLabel: UILabel!
-
-    var index: Int?
+class MapTabController: UIViewController
+{
+//    var index: Int?
+    var coords : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 40.248875, longitude: -111.649278)
+    var hikeName : String = ""
     
-    override func loadView() {
-        // Create a GMSCameraPosition that tells the map to display the
-        // coordinate -33.86,151.20 at zoom level 6.
-        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        initMap()
+//        if let index = self.index {
+////            self.label.text = "Page " + String(index)
+////            self.promptLabel.isHidden = index != 1
+//        }
+    }
+    
+    private func initMap()
+    {
+        let camera = GMSCameraPosition.camera(withLatitude: coords.latitude, longitude: coords.longitude, zoom: 16.0)
         let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         view = mapView
         
         // Creates a marker in the center of the map.
         let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
-        marker.title = "Sydney"
-        marker.snippet = "Australia"
+        marker.position = CLLocationCoordinate2D(latitude: coords.latitude, longitude: coords.longitude)
+        marker.title = hikeName
         marker.map = mapView
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        if let index = self.index {
-//            self.label.text = "Page " + String(index)
-//            self.promptLabel.isHidden = index != 1
-        }
     }
 }
