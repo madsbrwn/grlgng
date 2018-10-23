@@ -37,6 +37,7 @@ class TabViewController: TabmanViewController, PageboyViewControllerDataSource {
     {
         self.dataSource = self
         
+        self.bar.style = .buttonBar
         self.bar.appearance = PresetAppearanceConfigs.forStyle(self.bar.style, currentAppearance: self.bar.appearance)
         
         let index = 0
