@@ -8,7 +8,8 @@ target 'Handy Hiker' do
   # Pods for Handy Hiker
   pod 'Firebase/Core'
   pod 'Firebase/Database'
-  pod 'YNDropDownMenu'
+  pod 'YNDropDownMenu', '= 3.0.3'
   pod 'Tabman', '~> 1.10'
-
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
 end

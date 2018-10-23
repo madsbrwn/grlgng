@@ -10,17 +10,13 @@ import UIKit
 
 class InfoTabController: UIViewController {
 
-//    @IBOutlet weak var label: UILabel!
-//    @IBOutlet weak var promptLabel: UILabel!
-
+    @IBOutlet weak var UIHikeInfo: UITextView!
     var index: Int?
-    
+    var hikeDesc = ""
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let index = self.index {
-//            self.label.text = "Page " + String(index)
-//            self.promptLabel.isHidden = index != 1
-        }
+        UIHikeInfo.text = hikeDesc
     }
 }

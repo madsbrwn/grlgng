@@ -12,25 +12,31 @@ import Pageboy
 
 class TabViewController: TabmanViewController, PageboyViewControllerDataSource {
 
-    // MARK: Outlets
-    
-    @IBOutlet weak var separatorView: UIView!
-    @IBOutlet weak var offsetLabel: UILabel!
-    @IBOutlet weak var pageLabel: UILabel!
-
-    // MARK: Properties
-
     var previousBarButton: UIBarButtonItem?
     var nextBarButton: UIBarButtonItem?
+    
+    var selectedHike : Model.HikeObject?
     
     private var viewControllers = [UIViewController]()
     private var initialized = false
     
-    // MARK: Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        initializeTabBar()
+        
+        if let infoTabController = viewControllers[0] as? InfoTabController
+        {
+            infoTabController.hikeDesc = selectedHike?.description ?? ""
+        }
+    }
+        
+    
+    // Tab bar initialization/functionality/etc
+    
+    func initializeTabBar()
+    {
         self.dataSource = self
         
         self.bar.appearance = PresetAppearanceConfigs.forStyle(self.bar.style, currentAppearance: self.bar.appearance)
