@@ -38,10 +38,14 @@ class HikeFilterView: YNDropDownView {
 
 class HikeSortView: YNDropDownView {
     
+    @IBOutlet weak var sortBy: UISegmentedControl!
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = UIColor.white
         self.initViews()
+//        sortBy.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI / 2.0));
     }
     
     required init?(coder aDecoder: NSCoder) {
