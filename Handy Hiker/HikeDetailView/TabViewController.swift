@@ -14,12 +14,10 @@ class TabViewController: TabmanViewController, PageboyViewControllerDataSource {
 
     var previousBarButton: UIBarButtonItem?
     var nextBarButton: UIBarButtonItem?
-    
     var selectedHike : Model.HikeObject?
     
     private var viewControllers = [UIViewController]()
     private var initialized = false
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,10 +26,10 @@ class TabViewController: TabmanViewController, PageboyViewControllerDataSource {
         
         if let infoTabController = viewControllers[0] as? InfoTabController
         {
-            infoTabController.hikeDesc = selectedHike?.description ?? ""
+            infoTabController.setHikeDesc(desc: selectedHike?.description ?? "")
         }
     }
-        
+    
     
     // Tab bar initialization/functionality/etc
     

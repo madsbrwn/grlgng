@@ -16,7 +16,11 @@ class InfoTabController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    }
+    
+    func setHikeDesc(desc: String)
+    {
+        hikeDesc = desc
         UIHikeInfo.text = hikeDesc
     }
 }

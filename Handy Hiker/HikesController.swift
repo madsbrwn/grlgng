@@ -77,14 +77,15 @@ class HikesController: UIViewController, UITableViewDataSource
         if let hikeInfoView = segue.destination as? HikeDetailController
         {
             let selectedCell = sender as! TableViewCell
-            let hike = sharedModel.hikes[(selectedCell.HikeName?.text)!]
-            
-            hikeInfoView.name = hike?.name ?? ""
-            hikeInfoView.time = hike?.baseTime ?? 0
-            hikeInfoView.byuDistance = hike?.milesFromBYU ?? 0
-            hikeInfoView.hikeDistance = hike?.hikeDistance ?? 0
-            hikeInfoView.hikeDesc = hike?.description ?? ""
-            hikeInfoView.saved = hike?.saved ?? false
+            hikeInfoView.hike = sharedModel.hikes[(selectedCell.HikeName?.text)!]
+//
+//            
+//            hikeInfoView.name = hike?.name ?? ""
+//            hikeInfoView.time = hike?.baseTime ?? 0
+//            hikeInfoView.byuDistance = hike?.milesFromBYU ?? 0
+//            hikeInfoView.hikeDistance = hike?.hikeDistance ?? 0
+//            hikeInfoView.hikeDesc = hike?.description ?? ""
+//            hikeInfoView.saved = hike?.saved ?? false
         }
     }
     

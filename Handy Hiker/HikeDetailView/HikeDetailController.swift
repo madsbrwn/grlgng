@@ -16,24 +16,23 @@ class HikeDetailController:UIViewController
     @IBOutlet weak var UIName: UILabel!
     @IBOutlet weak var UIDistance: UILabel!
     @IBOutlet weak var UITime: UILabel!
-    @IBOutlet weak var UIHikeInfo : UITextView!
 
-    
-    var name = ""
-    var time = 0
-    var byuDistance : Double = 0
-    var hikeDistance : Double = 0
-    var hikeDesc = ""
-    var saved = false
+    var hike : Model.HikeObject?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
-        UIName.text = name
-        UIDistance.text = String(hikeDistance) + "mi"
-        UITime.text = buildTimeText(time: time)
-//        HikeInfo.text = hikeDesc
+        UIName.text = hike?.name
+        UIDistance.text = String(hike?.hikeDistance ?? 0.0) + "mi"
+        UITime.text = buildTimeText(time: hike?.baseTime ?? 0)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if let tabView = segue.destination as? TabViewController
+        {
+            tabView.selectedHike = hike
+        }
     }
     
     private func buildTimeText(time : Int) -> String
