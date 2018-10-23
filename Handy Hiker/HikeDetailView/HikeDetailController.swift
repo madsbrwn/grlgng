@@ -15,11 +15,9 @@ class HikeDetailController:UIViewController
     @IBOutlet weak var UIImage: UIImageView!
     @IBOutlet weak var UIName: UILabel!
     @IBOutlet weak var UIDistance: UILabel!
-    @IBOutlet weak var UILocation: UILabel!
     @IBOutlet weak var UITime: UILabel!
-    @IBOutlet weak var HikeInfo: UITextView!
-    
-    private var viewControllers = [UIViewController]()
+    @IBOutlet weak var UIHikeInfo : UITextView!
+
     
     var name = ""
     var time = 0
@@ -36,8 +34,6 @@ class HikeDetailController:UIViewController
         UIDistance.text = String(hikeDistance) + "mi"
         UITime.text = buildTimeText(time: time)
 //        HikeInfo.text = hikeDesc
-        
-
     }
     
     private func buildTimeText(time : Int) -> String

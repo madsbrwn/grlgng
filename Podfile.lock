@@ -31,6 +31,13 @@ PODS:
     - GoogleUtilities/Network (~> 5.2)
     - "GoogleUtilities/NSData+zlib (~> 5.2)"
     - nanopb (~> 0.3)
+  - GoogleMaps (2.7.0):
+    - GoogleMaps/Maps (= 2.7.0)
+  - GoogleMaps/Base (2.7.0)
+  - GoogleMaps/Maps (2.7.0):
+    - GoogleMaps/Base
+  - GooglePlaces (2.7.0):
+    - GoogleMaps/Base (= 2.7.0)
   - GoogleUtilities/AppDelegateSwizzler (5.3.0):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
@@ -62,8 +69,10 @@ PODS:
 DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
+  - GoogleMaps
+  - GooglePlaces
   - Tabman (~> 1.10)
-  - YNDropDownMenu
+  - YNDropDownMenu (= 3.0.3)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -74,6 +83,8 @@ SPEC REPOS:
     - FirebaseDatabase
     - FirebaseInstanceID
     - GoogleAppMeasurement
+    - GoogleMaps
+    - GooglePlaces
     - GoogleUtilities
     - leveldb-library
     - nanopb
@@ -89,6 +100,8 @@ SPEC CHECKSUMS:
   FirebaseDatabase: e2bcbc106adc4b11a2da3ec2eb63c0c4a44f2f54
   FirebaseInstanceID: ea5af6920d0a4a29b40459d055bebe4a6c1333c4
   GoogleAppMeasurement: 7d2552cea4e12d09ce737ef0441887a746585ff3
+  GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
+  GooglePlaces: 3d06e6c99654545b4738ce49648745779c25f2ef
   GoogleUtilities: 760ccb53b7c7f40f9c02d8c241f76f841a7a6162
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
@@ -96,6 +109,6 @@ SPEC CHECKSUMS:
   Tabman: 6cff148419c5d8812d0e9f08f93b6f1c6ba54502
   YNDropDownMenu: ba608568d4ac0a37385142f723da8cfc29c7ff11
 
-PODFILE CHECKSUM: eb7629939dad1174a2c95569d45e315c3dc10b6f
+PODFILE CHECKSUM: d68cf78ba1115285a85379109f6b05af70ae04c4
 
 COCOAPODS: 1.5.3
