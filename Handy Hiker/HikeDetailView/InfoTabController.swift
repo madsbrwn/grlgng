@@ -11,7 +11,6 @@ import UIKit
 class InfoTabController: UIViewController {
 
     @IBOutlet weak var UIHikeInfo: UITextView!
-    var index: Int?
     var hikeDesc = ""
 
     override func viewDidLoad() {

@@ -11,29 +11,22 @@ import GoogleMaps
 
 class MapTabController: UIViewController
 {
-//    var index: Int?
+    @IBOutlet weak var navBtn : UIButton!
     var coords : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 40.248875, longitude: -111.649278)
     var hikeName : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initMap()
-//        if let index = self.index {
-////            self.label.text = "Page " + String(index)
-////            self.promptLabel.isHidden = index != 1
-//        }
+        navBtn?.layer.cornerRadius = 6
+        navBtn?.clipsToBounds = true
     }
     
-    private func initMap()
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        let camera = GMSCameraPosition.camera(withLatitude: coords.latitude, longitude: coords.longitude, zoom: 16.0)
-        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-        view = mapView
-        
-        // Creates a marker in the center of the map.
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: coords.latitude, longitude: coords.longitude)
-        marker.title = hikeName
-        marker.map = mapView
+        if let mapView = segue.destination as? MapViewController
+        {
+            mapView.coords = self.coords
+            mapView.hikeName = self.hikeName
+        }
     }
 }

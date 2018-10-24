@@ -66,7 +66,6 @@ class TabViewController: TabmanViewController, PageboyViewControllerDataSource {
         var barItems = [Item]()
         
         let infoTabController = storyboard.instantiateViewController(withIdentifier: "ChildViewController1") as! InfoTabController
-        infoTabController.index = 1
         barItems.append(Item(title: "Info"))
         viewControllers.append(infoTabController)
 
