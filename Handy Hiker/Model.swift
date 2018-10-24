@@ -172,7 +172,7 @@ class Model : NSObject
         
         func calculateTotalMinutes()
         {
-            self.totalMinutes = (2 * minutesFromBYU) + Int((trailLength * diffFactors[difficulty]))
+            self.totalMinutes = (2 * minutesFromBYU) + Int((trailLength / ((1 / 20) * diffFactors[difficulty])))
         }
     }
 }
