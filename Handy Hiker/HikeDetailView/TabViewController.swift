@@ -27,6 +27,7 @@ class TabViewController: TabmanViewController, PageboyViewControllerDataSource {
         if let infoTabController = viewControllers[0] as? InfoTabController
         {
             infoTabController.setHikeDesc(desc: selectedHike?.description ?? "")
+            infoTabController.setCompleted(comp: selectedHike?.completed ?? false)
         }
     }
     
@@ -66,11 +67,11 @@ class TabViewController: TabmanViewController, PageboyViewControllerDataSource {
         var barItems = [Item]()
         
         let infoTabController = storyboard.instantiateViewController(withIdentifier: "ChildViewController1") as! InfoTabController
+        infoTabController.hikeName = (selectedHike?.name)!
         barItems.append(Item(title: "Info"))
         viewControllers.append(infoTabController)
 
         let mapTabController = storyboard.instantiateViewController(withIdentifier: "ChildViewController2") as! MapTabController
-//        mapTabController.index = 2
         mapTabController.coords = (selectedHike?.coords)!
         mapTabController.hikeName = (selectedHike?.name)!
         barItems.append(Item(title: "Map"))

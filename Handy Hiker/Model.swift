@@ -110,6 +110,11 @@ class Model : NSObject
         return filteredHikes
     }
     
+    public func updateHikeCompleted( name: String, completed : Bool)
+    {
+        hikes[name]?.completed = true
+    }
+    
     
     public class HikeObject
     {
