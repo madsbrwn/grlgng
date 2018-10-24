@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		010550FF217FF340008994EA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010550FE217FF340008994EA /* MapViewController.swift */; };
 		01A67AAB2159BE3C004C8EF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A67AAA2159BE3C004C8EF4 /* AppDelegate.swift */; };
 		01A67AAD2159BE3C004C8EF4 /* HikesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A67AAC2159BE3C004C8EF4 /* HikesController.swift */; };
 		01A67AAF2159BE3C004C8EF4 /* SavedHikesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A67AAE2159BE3C004C8EF4 /* SavedHikesController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		010550FE217FF340008994EA /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		01A67AA72159BE3C004C8EF4 /* Handy Hiker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Handy Hiker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01A67AAA2159BE3C004C8EF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01A67AAC2159BE3C004C8EF4 /* HikesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HikesController.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				01D5EB172176E414006FDCF9 /* TabViewController.swift */,
 				01D5EB132176CF89006FDCF9 /* InfoTabController.swift */,
 				01D5EB152176D12A006FDCF9 /* MapTabController.swift */,
+				010550FE217FF340008994EA /* MapViewController.swift */,
 				01D5EB1C2176EFB6006FDCF9 /* PresetAppearanceConfigs.swift */,
 				01D5EB192176E71C006FDCF9 /* TransparentNavigationBar.swift */,
 			);
@@ -322,6 +325,7 @@
 				01D5EB1A2176E71C006FDCF9 /* TransparentNavigationBar.swift in Sources */,
 				01A67AAB2159BE3C004C8EF4 /* AppDelegate.swift in Sources */,
 				01F063AB2166C1D300648C11 /* TimePickerController.swift in Sources */,
+				010550FF217FF340008994EA /* MapViewController.swift in Sources */,
 				01A67AAD2159BE3C004C8EF4 /* HikesController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

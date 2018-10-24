@@ -9,34 +9,24 @@
 import UIKit
 import GoogleMaps
 
-class MapTabController: UIViewController {
-
-//    @IBOutlet weak var label: UILabel!
-//    @IBOutlet weak var promptLabel: UILabel!
-
-    var index: Int?
-    
-    override func loadView() {
-        // Create a GMSCameraPosition that tells the map to display the
-        // coordinate -33.86,151.20 at zoom level 6.
-        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
-        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-        view = mapView
-        
-        // Creates a marker in the center of the map.
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
-        marker.title = "Sydney"
-        marker.snippet = "Australia"
-        marker.map = mapView
-    }
+class MapTabController: UIViewController
+{
+    @IBOutlet weak var navBtn : UIButton!
+    var coords : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 40.248875, longitude: -111.649278)
+    var hikeName : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        if let index = self.index {
-//            self.label.text = "Page " + String(index)
-//            self.promptLabel.isHidden = index != 1
+        navBtn?.layer.cornerRadius = 6
+        navBtn?.clipsToBounds = true
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if let mapView = segue.destination as? MapViewController
+        {
+            mapView.coords = self.coords
+            mapView.hikeName = self.hikeName
         }
     }
 }

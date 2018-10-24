@@ -36,10 +36,13 @@ class PresetAppearanceConfigs: Any {
             appearance.style.showEdgeFade = true
 
         case .buttonBar:
-            appearance.indicator.lineWeight = .thin
-            appearance.indicator.compresses = true
-            appearance.layout.edgeInset = 8.0
-            appearance.layout.interItemSpacing = 0.0
+            appearance.layout.itemVerticalPadding = 16.0
+            appearance.indicator.bounces = true
+            appearance.indicator.lineWeight = .thick
+            appearance.layout.edgeInset = 16.0
+            appearance.layout.interItemSpacing = 20.0
+            appearance.layout.itemDistribution = .centered
+            appearance.style.showEdgeFade = true
             
         case .blockTabBar:
             appearance.indicator.color = UIColor.white.withAlphaComponent(0.3)

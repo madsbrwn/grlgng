@@ -14,12 +14,10 @@ class TabViewController: TabmanViewController, PageboyViewControllerDataSource {
 
     var previousBarButton: UIBarButtonItem?
     var nextBarButton: UIBarButtonItem?
-    
     var selectedHike : Model.HikeObject?
     
     private var viewControllers = [UIViewController]()
     private var initialized = false
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,10 +26,10 @@ class TabViewController: TabmanViewController, PageboyViewControllerDataSource {
         
         if let infoTabController = viewControllers[0] as? InfoTabController
         {
-            infoTabController.hikeDesc = selectedHike?.description ?? ""
+            infoTabController.setHikeDesc(desc: selectedHike?.description ?? "")
         }
     }
-        
+    
     
     // Tab bar initialization/functionality/etc
     
@@ -39,6 +37,7 @@ class TabViewController: TabmanViewController, PageboyViewControllerDataSource {
     {
         self.dataSource = self
         
+        self.bar.style = .buttonBar
         self.bar.appearance = PresetAppearanceConfigs.forStyle(self.bar.style, currentAppearance: self.bar.appearance)
         
         let index = 0
@@ -67,12 +66,13 @@ class TabViewController: TabmanViewController, PageboyViewControllerDataSource {
         var barItems = [Item]()
         
         let infoTabController = storyboard.instantiateViewController(withIdentifier: "ChildViewController1") as! InfoTabController
-        infoTabController.index = 1
         barItems.append(Item(title: "Info"))
         viewControllers.append(infoTabController)
 
         let mapTabController = storyboard.instantiateViewController(withIdentifier: "ChildViewController2") as! MapTabController
-        mapTabController.index = 2
+//        mapTabController.index = 2
+        mapTabController.coords = (selectedHike?.coords)!
+        mapTabController.hikeName = (selectedHike?.name)!
         barItems.append(Item(title: "Map"))
         viewControllers.append(mapTabController)
         
