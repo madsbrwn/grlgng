@@ -52,7 +52,7 @@ class Model : NSObject
         hike.name = "Mt. Timpanogos"
         hike.coords = CLLocationCoordinate2D(latitude: 40.405099, longitude: -111.606239)
         hike.minutesFromBYU = 26
-        hike.trailLength = 12
+        hike.trailLength = 15
         hike.calculateTotalMinutes()
         hike.description = "Mount Timpanogos offers views year round of spectacularly rugged terrain with outstanding glacial cirques, (the round, circular shaped valleys below the peaks) and moraines (masses of rocks, gravel, and sand deposited by glaciers). During the peak wildflower season which is late July and early August, this popular destination is a beautiful place to hike as a multitude of mountain wildflowers burst into colorful full bloom."
         hike.difficulty = 2
