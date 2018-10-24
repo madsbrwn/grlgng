@@ -15,6 +15,7 @@ class HikeDetailController:UIViewController
     @IBOutlet weak var UIImage: UIImageView!
     @IBOutlet weak var UIName: UILabel!
     @IBOutlet weak var UIDistance: UILabel!
+    @IBOutlet weak var UIDriveTime: UILabel!
     @IBOutlet weak var UITime: UILabel!
 
     var hike : Model.HikeObject?
@@ -23,7 +24,8 @@ class HikeDetailController:UIViewController
         super.viewDidLoad()
         
         UIName.text = hike?.name
-        UIDistance.text = String(hike?.trailLength ?? 0.0) + "mi"
+        UIDistance.text = String(hike?.trailLength ?? 0.0) + " mi"
+        UIDriveTime.text = buildTimeText(time: hike?.minutesFromBYU ?? 0)
         UITime.text = buildTimeText(time: hike?.totalMinutes ?? 0)
     }
     

@@ -21,5 +21,13 @@ class InfoTabController: UIViewController {
     {
         hikeDesc = desc
         UIHikeInfo.text = hikeDesc
+        adjustUITextViewHeight(arg: UIHikeInfo)
+    }
+    
+    func adjustUITextViewHeight(arg : UITextView)
+    {
+        arg.translatesAutoresizingMaskIntoConstraints = true
+        arg.sizeToFit()
+        arg.isScrollEnabled = false
     }
 }
