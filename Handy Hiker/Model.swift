@@ -16,6 +16,9 @@ class UserInfo : NSObject
     var name : String = "Your Name"
     // speed is represented with floats between 1 and 3 with 3 being fastest speed
     var speed : Float = 2.0
+    var hikesCompleted : Int = 0
+    var milesHiked : Double = 0
+    var minutesSpentHiking : Int = 0
     
     public func getName() -> String
     {
@@ -90,6 +93,31 @@ class Model : NSObject
         hikes["Stewart Falls"] = hike
     }
     
+    public func buildTimeText(time : Int) -> String
+    {
+        if (time == 0)
+        {
+            return "any time"
+        }
+        
+        let hrs = time / 60
+        let min = time % 60
+        
+        var str : String = ""
+        
+        if hrs != 0
+        {
+            str += String(hrs) + (hrs == 1 ? " hr " : " hrs ")
+        }
+        
+        if min != 0
+        {
+            str += String(min) + " min"
+        }
+        
+        return str
+    }
+    
     public func getHikesUnderTime(time : Int) -> [HikeObject]
     {
         if (time == 0)
@@ -113,6 +141,19 @@ class Model : NSObject
     public func updateHikeCompleted( name: String, completed : Bool)
     {
         hikes[name]?.completed = true
+        
+        if completed
+        {
+            userInfo.hikesCompleted += 1
+            userInfo.milesHiked += (hikes[name]?.trailLength)!
+            userInfo.minutesSpentHiking += (hikes[name]?.totalMinutes)!
+        }
+        else
+        {
+            userInfo.hikesCompleted -= 1
+            userInfo.milesHiked -= (hikes[name]?.trailLength)!
+            userInfo.minutesSpentHiking -= (hikes[name]?.totalMinutes)!
+        }
     }
     
     
