@@ -101,7 +101,7 @@ class Model : NSObject
         
         for (_, data) in hikes
         {
-            if (data.totalMinutes < time)
+            if (data.totalMinutes <= time)
             {
                 filteredHikes.append(data)
             }
