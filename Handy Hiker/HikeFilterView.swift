@@ -45,7 +45,7 @@ class HikeSortView: YNDropDownView {
         super.init(frame: frame)
         self.backgroundColor = UIColor.white
         self.initViews()
-//        sortBy.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI / 2.0));
+        sortBy.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI / 2.0));
     }
     
     required init?(coder aDecoder: NSCoder) {
