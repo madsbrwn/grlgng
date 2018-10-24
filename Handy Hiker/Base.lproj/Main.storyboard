@@ -670,7 +670,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Be-It-VKc">
-                                <rect key="frame" x="16" y="73" width="343" height="260"/>
+                                <rect key="frame" x="16" y="68" width="343" height="265"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="je4-8z-KsJ" kind="embed" id="wau-EQ-wHr"/>
@@ -702,7 +702,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IjS-NR-2zD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2882" y="-329"/>
+            <point key="canvasLocation" x="2882.4000000000001" y="-328.78560719640183"/>
         </scene>
         <!--TabViewController-->
         <scene sceneID="FPU-UE-4dd">
@@ -724,7 +724,7 @@
             <objects>
                 <viewController id="je4-8z-KsJ" customClass="MapViewController" customModule="Handy_Hiker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h7p-ho-pSC">
-                        <rect key="frame" x="0.0" y="0.0" width="343" height="260"/>
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="265"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
