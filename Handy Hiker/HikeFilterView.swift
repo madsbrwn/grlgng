@@ -10,6 +10,11 @@ import YNDropDownMenu
 
 class HikeFilterView: YNDropDownView {
     
+    @IBOutlet weak var lengthSlider: UISlider!
+    
+    @IBAction func sliderMoved(sender: UISlider) {
+        sender.setValue(Float(lroundf(lengthSlider.value)), animated: true)
+    }
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = UIColor.white
