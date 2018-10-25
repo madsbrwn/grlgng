@@ -332,10 +332,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3O-fW-gaS">
-                                <rect key="frame" x="170" y="537" width="34" height="34"/>
+                                <rect key="frame" x="132" y="537" width="110" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="18"/>
-                                <state key="normal" title="Skip"/>
+                                <state key="normal" title="Show all hikes"/>
                                 <connections>
                                     <segue destination="9pv-A4-QxB" kind="show" id="DEk-qX-TKT"/>
                                 </connections>
