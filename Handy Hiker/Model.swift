@@ -93,6 +93,128 @@ class Model : NSObject
         hike.difficulty = 1
         
         hikes["Stewart Falls"] = hike
+        
+        hike = HikeObject()
+        hike.name = "Squaw Peak Trail"
+        hike.coords = CLLocationCoordinate2D(latitude: 40.264681, longitude: -111.630397)
+        hike.minutesFromBYU = 4
+        hike.trailLength = 7.0
+        hike.calculateTotalMinutes()
+        hike.description = "Squaw Peak Trail is a 7 mile moderately trafficked out and back trail located near Provo, Utah that features a river and is rated as difficult. The trail offers a number of activity options and is best used from March until October. Dogs are also able to use this trail but must be kept on leash."
+        hike.difficulty = 2
+        
+        hikes[hike.name] = hike
+        
+        
+        
+        hike = HikeObject()
+        hike.name = "Rock Canyon Trail"
+        hike.coords = CLLocationCoordinate2D(latitude: 40.264681, longitude: -111.630397)
+        hike.minutesFromBYU = 4
+        hike.trailLength = 5.5
+        hike.calculateTotalMinutes()
+        hike.description = "Rock Canyon Trail is a 5.5 mile heavily trafficked out and back trail located near Provo, Utah that features a river and is rated as moderate. The trail offers a number of activity options and is accessible year-round. Dogs are also able to use this trail."
+        hike.difficulty = 1
+        
+        hikes[hike.name] = hike
+        
+        
+        hike = HikeObject()
+        hike.name = "Buffalo Peak Trail"
+        hike.coords = CLLocationCoordinate2D(latitude: 40.283362, longitude: -111.605368)
+        hike.minutesFromBYU = 34
+        hike.trailLength = 0.9
+        hike.calculateTotalMinutes()
+        hike.description = "Buffalo Peak Trail is a 0.9 mile moderately trafficked out and back trail located near Provo, Utah that features beautiful wild flowers and is rated as moderate. The trail is primarily used for hiking and is best used from May until October. Dogs are also able to use this trail but must be kept on leash."
+        hike.difficulty = 1
+        
+        hikes[hike.name] = hike
+        
+        
+        hike = HikeObject()
+        hike.name = "Big Springs Hollow Trail"
+        hike.coords = CLLocationCoordinate2D(latitude: 40.332479, longitude: -111.524775)
+        hike.minutesFromBYU = 12
+        hike.trailLength = 4.2
+        hike.calculateTotalMinutes()
+        hike.description = "Big Springs Hollow Trail is a 4.2 mile moderately trafficked out and back trail located near Provo, Utah that features beautiful wild flowers and is good for all skill levels. The trail offers a number of activity options and is accessible year-round. Dogs are also able to use this trail but must be kept on leash."
+        hike.difficulty = 0
+        
+        hikes[hike.name] = hike
+        
+        
+        
+        hike = HikeObject()
+        hike.name = "Slate Canyon Loop Trail"
+        hike.coords = CLLocationCoordinate2D(latitude: 40.224477, longitude: -111.625388)
+        hike.minutesFromBYU = 7
+        hike.trailLength = 8.5
+        hike.calculateTotalMinutes()
+        hike.description = "Slate Canyon Loop Trail is a 8.5 mile lightly trafficked loop trail located near Provo, Utah that features a river and is rated as difficult. The trail offers a number of activity options and is best used from April until October. Horses are also able to use this trail."
+        hike.difficulty = 2
+        
+        hikes[hike.name] = hike
+        
+        
+        hike = HikeObject()
+        hike.name = "Battle Creek Falls Trail"
+        hike.coords = CLLocationCoordinate2D(latitude: 40.363029, longitude: -111.700558)
+        hike.minutesFromBYU = 22
+        hike.trailLength = 4.1
+        hike.calculateTotalMinutes()
+        hike.description = "Battle Creek Falls Trail is a 4.1 mile heavily trafficked out and back trail located near Pleasant Grove, Utah that features a waterfall and is rated as moderate. The trail offers a number of activity options and is best used from March until October. Dogs are also able to use this trail."
+        hike.difficulty = 1
+        
+        hikes[hike.name] = hike
+        
+        hike = HikeObject()
+        hike.name = "Cascade Saddle Trail"
+        hike.coords = CLLocationCoordinate2D(latitude: 40.332479, longitude: -111.524775)
+        hike.minutesFromBYU = 12
+        hike.trailLength = 10.5
+        hike.calculateTotalMinutes()
+        hike.description = "Cascade Saddle Trail is a 10.5 mile moderately trafficked out and back trail located near Provo, Utah that features beautiful wild flowers and is only recommended for very experienced adventurers. The trail is primarily used for hiking, walking, nature trips, and birding and is best used from July until October."
+        hike.difficulty = 2
+        
+        hikes[hike.name] = hike
+        
+        
+        
+        hike = HikeObject()
+        hike.name = "North Fork Ridge Trail"
+        hike.coords = CLLocationCoordinate2D(latitude: 40.430124, longitude: -111.611125)
+        hike.minutesFromBYU = 39
+        hike.trailLength = 3.9
+        hike.calculateTotalMinutes()
+        hike.description = "North Fork Ridge Trail is a 3.9 mile out and back trail located near Provo, Utah that features a great forest setting. The trail is rated as moderate and primarily used for hiking, walking, trail running, and nature trips. Dogs are also able to use this trail."
+        hike.difficulty = 1
+        
+        hikes[hike.name] = hike
+        
+        
+        hike = HikeObject()
+        hike.name = "Dripping Rock Falls"
+        hike.coords = CLLocationCoordinate2D(latitude: 40.083714, longitude: -111.597580)
+        hike.minutesFromBYU = 20
+        hike.trailLength = 0.7
+        hike.calculateTotalMinutes()
+        hike.description = "Dripping Rock Falls is a 0.7 mile moderately trafficked out and back trail located near Spanish Fork, Utah that features a waterfall and is good for all skill levels. The trail is primarily used for hiking, walking, nature trips, and birding and is best used from April until October. Dogs are also able to use this trail but must be kept on leash."
+        hike.difficulty = 0
+        
+        hikes[hike.name] = hike
+        
+        
+        hike = HikeObject()
+        hike.name = "Grove Creek Canyon and Mahogany Ridge"
+        hike.coords = CLLocationCoordinate2D(latitude: 40.374726, longitude: -111.712174)
+        hike.minutesFromBYU = 26
+        hike.trailLength = 14.9
+        hike.calculateTotalMinutes()
+        hike.description = "Grove Creek Canyon and Mahogany Ridge  is a 14.9 mile moderately trafficked out and back trail located near Pleasant Grove, Utah that features a great forest setting and is rated as moderate. The trail offers a number of activity options and is best used from April until September."
+        hike.difficulty = 1
+        
+        hikes[hike.name] = hike
+
     }
     
     public func buildTimeText(time : Int) -> String
