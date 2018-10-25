@@ -26,6 +26,7 @@
 		064B3B059FEE1E7D999463D0 /* Pods_Handy_Hiker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 133789E844A8A67524828322 /* Pods_Handy_Hiker.framework */; };
 		360C0056217D6243001A0012 /* HikeFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360C0055217D6243001A0012 /* HikeFilterView.swift */; };
 		360C0058217D632D001A0012 /* HikeFilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360C0057217D632D001A0012 /* HikeFilterView.xib */; };
+		364553922181482B0075BEC1 /* HikeFilterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364553912181482B0075BEC1 /* HikeFilterController.swift */; };
 		3681509F217425C600266CEC /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 3681509E217425C600266CEC /* fonts */; };
 		368150B021742B2D00266CEC /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 368150A221742B2B00266CEC /* Lato-Black.ttf */; };
 		368150B721742B2D00266CEC /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 368150A921742B2C00266CEC /* Lato-Bold.ttf */; };
@@ -57,6 +58,7 @@
 		133789E844A8A67524828322 /* Pods_Handy_Hiker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Handy_Hiker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		360C0055217D6243001A0012 /* HikeFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HikeFilterView.swift; sourceTree = "<group>"; };
 		360C0057217D632D001A0012 /* HikeFilterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HikeFilterView.xib; sourceTree = "<group>"; };
+		364553912181482B0075BEC1 /* HikeFilterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HikeFilterController.swift; sourceTree = "<group>"; };
 		3681509E217425C600266CEC /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		368150A221742B2B00266CEC /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Black.ttf"; path = "fonts/Lato-Black.ttf"; sourceTree = "<group>"; };
 		368150A921742B2C00266CEC /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Bold.ttf"; path = "fonts/Lato-Bold.ttf"; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 		01A67AA92159BE3C004C8EF4 /* Handy Hiker */ = {
 			isa = PBXGroup;
 			children = (
+				364553932181483B0075BEC1 /* DropDownView */,
 				36F7D2B421641E9200588FC2 /* GoogleService-Info.plist */,
 				01A67AAA2159BE3C004C8EF4 /* AppDelegate.swift */,
 				01F063AA2166C1D300648C11 /* TimePickerController.swift */,
@@ -119,8 +122,6 @@
 				01A67AB82159BE41004C8EF4 /* Info.plist */,
 				01EA5FA2216F74B000450195 /* Model.swift */,
 				368150BC2174F50F00266CEC /* CustomTabBarController.swift */,
-				360C0055217D6243001A0012 /* HikeFilterView.swift */,
-				360C0057217D632D001A0012 /* HikeFilterView.xib */,
 			);
 			path = "Handy Hiker";
 			sourceTree = "<group>";
@@ -137,6 +138,16 @@
 				01D5EB192176E71C006FDCF9 /* TransparentNavigationBar.swift */,
 			);
 			path = HikeDetailView;
+			sourceTree = "<group>";
+		};
+		364553932181483B0075BEC1 /* DropDownView */ = {
+			isa = PBXGroup;
+			children = (
+				360C0057217D632D001A0012 /* HikeFilterView.xib */,
+				360C0055217D6243001A0012 /* HikeFilterView.swift */,
+				364553912181482B0075BEC1 /* HikeFilterController.swift */,
+			);
+			path = DropDownView;
 			sourceTree = "<group>";
 		};
 		5F65599490D020A61AD4D7AB /* Frameworks */ = {
@@ -312,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				364553922181482B0075BEC1 /* HikeFilterController.swift in Sources */,
 				01D5EB1D2176EFB7006FDCF9 /* PresetAppearanceConfigs.swift in Sources */,
 				01EA5FA3216F74B000450195 /* Model.swift in Sources */,
 				01F063A92166BFF700648C11 /* YourInfoController.swift in Sources */,

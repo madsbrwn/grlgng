@@ -45,6 +45,8 @@ class Model : NSObject
 {
     var hikes : Dictionary = [String : HikeObject]()
     var userInfo : UserInfo = UserInfo()
+    var filterByLength : Float = 30
+    var filterByDiff : Int = -1
     
     override init()
     {
@@ -120,6 +122,7 @@ class Model : NSObject
     
     public func getHikesUnderTime(time : Int) -> [HikeObject]
     {
+        
         if (time == 0)
         {
             return [HikeObject](hikes.values)
@@ -129,19 +132,35 @@ class Model : NSObject
         
         for (_, data) in hikes
         {
-            if (data.totalMinutes <= time)
+            if (data.totalMinutes <= time && data.trailLength <= Double(filterByLength))
             {
-                filteredHikes.append(data)
+                if (filterByDiff == -1)
+                {
+                    filteredHikes.append(data)
+                }
+                else if (data.difficulty == filterByDiff)
+                {
+                    filteredHikes.append(data)
+                }
             }
         }
         
         return filteredHikes
     }
     
+    public func updateFilterDiff(diff: Int)
+    {
+        filterByDiff = diff
+    }
+
+    public func updateFilterLength(length: Float)
+    {
+        filterByLength = length
+    }
+    
     public func updateHikeCompleted( name: String, completed : Bool)
     {
         hikes[name]?.completed = true
-        
         if completed
         {
             userInfo.hikesCompleted += 1
@@ -155,6 +174,8 @@ class Model : NSObject
             userInfo.minutesSpentHiking -= (hikes[name]?.totalMinutes)!
         }
     }
+    
+
     
     
     public class HikeObject

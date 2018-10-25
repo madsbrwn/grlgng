@@ -30,6 +30,10 @@
                         <segment title="Hard"/>
                     </segments>
                     <color key="tintColor" red="0.3411764706" green="0.61176470589999998" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <action selector="indexChanged:" destination="iN0-l3-epB" eventType="valueChanged" id="c1C-9l-QQg"/>
+                        <action selector="itemPicked:" destination="iN0-l3-epB" eventType="editingChanged" id="zj6-eE-9XT"/>
+                    </connections>
                 </segmentedControl>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Difficulty Level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B19-Ru-DDh">
                     <rect key="frame" x="52" y="15" width="99" height="18"/>
@@ -96,9 +100,10 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="diffPicker" destination="9nu-yh-F6P" id="kxu-pF-IFa"/>
                 <outlet property="lengthSlider" destination="BV4-20-hl3" id="jnt-b0-paI"/>
             </connections>
-            <point key="canvasLocation" x="136.80000000000001" y="19.790104947526238"/>
+            <point key="canvasLocation" x="148" y="21"/>
         </view>
         <view contentMode="scaleToFill" id="JSo-NK-jMn" customClass="HikeSortView" customModule="Handy_Hiker" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="228"/>
