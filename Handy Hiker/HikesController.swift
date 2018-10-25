@@ -43,6 +43,8 @@ class HikesController: UIViewController, UITableViewDataSource
         
         hikes = sharedModel.getHikesUnderTime(time: minutes)
         
+        self.hikes.sort(by: {$0.name < $1.name})
+        
         for (hike) in hikes
         {
             names.append(hike.name)
