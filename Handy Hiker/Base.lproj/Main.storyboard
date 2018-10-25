@@ -101,6 +101,9 @@
                                 <rect key="frame" x="34" y="573" width="306" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="minimumTrackTintColor" red="0.47122225359999997" green="0.61846901409999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="sliderMovedWithSender:" destination="GLt-GL-5GX" eventType="valueChanged" id="TQw-jT-RtQ"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Slow" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pv-nk-JDk">
                                 <rect key="frame" x="36" y="555" width="35" height="21"/>
@@ -238,7 +241,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9bb-bV-ix5" customClass="YNDropDownMenu">
-                                        <rect key="frame" x="217" y="73" width="150" height="32"/>
+                                        <rect key="frame" x="289" y="73" width="78" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.13725490200000001" green="0.23921568630000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
@@ -794,21 +797,21 @@
         </scene>
     </scenes>
     <resources>
-        <image name="car" width="25.600000381469727" height="25.600000381469727"/>
-        <image name="check_outline" width="204.80000305175781" height="204.80000305175781"/>
-        <image name="clock" width="25.600000381469727" height="25.600000381469727"/>
-        <image name="compass" width="204.80000305175781" height="204.80000305175781"/>
+        <image name="car" width="32" height="32"/>
+        <image name="check_outline" width="256" height="256"/>
+        <image name="clock" width="32" height="32"/>
+        <image name="compass" width="256" height="256"/>
         <image name="first" width="30" height="30"/>
-        <image name="heart_filled" width="25.600000381469727" height="25.600000381469727"/>
-        <image name="heart_outline" width="25.600000381469727" height="25.600000381469727"/>
-        <image name="hiker" width="25.600000381469727" height="25.600000381469727"/>
-        <image name="manavatar" width="465.60000610351562" height="457"/>
-        <image name="person_filled" width="25.600000381469727" height="25.600000381469727"/>
-        <image name="person_outline" width="25.600000381469727" height="25.600000381469727"/>
+        <image name="heart_filled" width="32" height="32"/>
+        <image name="heart_outline" width="32" height="32"/>
+        <image name="hiker" width="32" height="32"/>
+        <image name="manavatar" width="323" height="317"/>
+        <image name="person_filled" width="32" height="32"/>
+        <image name="person_outline" width="32" height="32"/>
         <image name="second" width="30" height="30"/>
-        <image name="timp" width="1105.9200439453125" height="737.280029296875"/>
-        <image name="tree_filled" width="25.600000381469727" height="25.600000381469727"/>
-        <image name="tree_outline" width="25.600000381469727" height="25.600000381469727"/>
+        <image name="timp" width="4608" height="3072"/>
+        <image name="tree_filled" width="32" height="32"/>
+        <image name="tree_outline" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="lda-Bg-eWf"/>

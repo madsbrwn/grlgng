@@ -29,6 +29,10 @@ class YourInfoController: UIViewController, UITextFieldDelegate
         checkModel()
     }
     
+    @IBAction func sliderMoved(sender: UISlider) {
+        sender.setValue(Float(lroundf(hikeSpeed.value)), animated: true)
+    }
+    
     func checkModel()
     {
         hikeSpeed.setValue(userInfo.getSpeed(), animated: true)
