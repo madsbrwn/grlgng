@@ -165,38 +165,50 @@
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="84.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JrC-tO-rGd">
-                                                    <rect key="frame" x="50" y="56" width="120" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="Irf-hb-tdB">
-                                                    <rect key="frame" x="28" y="58" width="21" height="19"/>
+                                                    <rect key="frame" x="13" y="57" width="21" height="19"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Imp-2P-M1f">
-                                                    <rect key="frame" x="270" y="56" width="93" height="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="200.24 mi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Imp-2P-M1f">
+                                                    <rect key="frame" x="295" y="56" width="66" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="15"/>
+                                                    <color key="textColor" red="0.3411764706" green="0.61176470589999998" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMp-iS-8gA">
-                                                    <rect key="frame" x="29" y="12" width="273" height="30"/>
+                                                    <rect key="frame" x="15" y="11" width="273" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12 hrs 55 min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B70-K2-rwC" userLabel="DriveTime">
+                                                    <rect key="frame" x="172" y="55" width="88" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="15"/>
+                                                    <color key="textColor" red="0.3411764706" green="0.61176470589999998" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="car" translatesAutoresizingMaskIntoConstraints="NO" id="zkz-rJ-aOO">
+                                                    <rect key="frame" x="143" y="56" width="22" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12 hrs 55 min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JrC-tO-rGd">
+                                                    <rect key="frame" x="39" y="56" width="90" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
+                                                    <color key="textColor" red="0.3411764706" green="0.61176470589999998" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hiker" translatesAutoresizingMaskIntoConstraints="NO" id="9Dk-UX-OFq">
-                                                    <rect key="frame" x="248" y="58" width="22" height="19"/>
+                                                    <rect key="frame" x="271" y="58" width="22" height="17"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="DriveTime" destination="B70-K2-rwC" id="JJq-Xz-aeF"/>
                                             <outlet property="HikeLength" destination="Imp-2P-M1f" id="HWW-rd-FQw"/>
                                             <outlet property="HikeName" destination="CMp-iS-8gA" id="Odd-ht-2Jq"/>
                                             <outlet property="HikeTime" destination="JrC-tO-rGd" id="YwA-Zs-ne6"/>
@@ -797,21 +809,21 @@
         </scene>
     </scenes>
     <resources>
-        <image name="car" width="32" height="32"/>
-        <image name="check_outline" width="256" height="256"/>
-        <image name="clock" width="32" height="32"/>
-        <image name="compass" width="256" height="256"/>
+        <image name="car" width="25.600000381469727" height="25.600000381469727"/>
+        <image name="check_outline" width="204.80000305175781" height="204.80000305175781"/>
+        <image name="clock" width="25.600000381469727" height="25.600000381469727"/>
+        <image name="compass" width="204.80000305175781" height="204.80000305175781"/>
         <image name="first" width="30" height="30"/>
-        <image name="heart_filled" width="32" height="32"/>
-        <image name="heart_outline" width="32" height="32"/>
-        <image name="hiker" width="32" height="32"/>
-        <image name="manavatar" width="323" height="317"/>
-        <image name="person_filled" width="32" height="32"/>
-        <image name="person_outline" width="32" height="32"/>
+        <image name="heart_filled" width="25.600000381469727" height="25.600000381469727"/>
+        <image name="heart_outline" width="25.600000381469727" height="25.600000381469727"/>
+        <image name="hiker" width="25.600000381469727" height="25.600000381469727"/>
+        <image name="manavatar" width="465.60000610351562" height="457"/>
+        <image name="person_filled" width="25.600000381469727" height="25.600000381469727"/>
+        <image name="person_outline" width="25.600000381469727" height="25.600000381469727"/>
         <image name="second" width="30" height="30"/>
-        <image name="timp" width="4608" height="3072"/>
-        <image name="tree_filled" width="32" height="32"/>
-        <image name="tree_outline" width="32" height="32"/>
+        <image name="timp" width="1105.9200439453125" height="737.280029296875"/>
+        <image name="tree_filled" width="25.600000381469727" height="25.600000381469727"/>
+        <image name="tree_outline" width="25.600000381469727" height="25.600000381469727"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="lda-Bg-eWf"/>

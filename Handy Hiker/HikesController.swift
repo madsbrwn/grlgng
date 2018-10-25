@@ -18,6 +18,7 @@ class TableViewCell : UITableViewCell {
     
     @IBOutlet weak var HikeTime: UILabel!
     @IBOutlet weak var HikeLength: UILabel!
+    @IBOutlet weak var DriveTime: UILabel!
 }
 
 class HikesController: UIViewController, UITableViewDataSource
@@ -29,6 +30,7 @@ class HikesController: UIViewController, UITableViewDataSource
     
     var names : [String] = []
     var times : [String] = []
+    var driveTimes : [String] = []
     var lengths : [String] = []
     
     override func viewDidLoad() {
@@ -44,6 +46,7 @@ class HikesController: UIViewController, UITableViewDataSource
         {
             names.append(hike.name)
             times.append(sharedModel.buildTimeText(time: hike.totalMinutes))
+            driveTimes.append(sharedModel.buildTimeText(time: hike.minutesFromBYU))
             lengths.append(String(hike.trailLength))
         }
         
@@ -62,6 +65,7 @@ class HikesController: UIViewController, UITableViewDataSource
         
         cell.HikeName?.text = names[indexPath.row]
         cell.HikeTime?.text = times[indexPath.row]
+        cell.DriveTime.text = driveTimes[indexPath.row]
         cell.HikeLength?.text = lengths[indexPath.row] + " mi"
         return cell
     }
