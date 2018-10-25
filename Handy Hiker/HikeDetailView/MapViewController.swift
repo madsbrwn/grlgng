@@ -20,8 +20,8 @@ class MapViewController: UIViewController
     
     private func initMap()
     {
-        let camera = GMSCameraPosition.camera(withTarget: coords, zoom: 16.0)
-        let mapView = GMSMapView.map(withFrame: .zero, camera: camera)
+        let camera = GMSCameraPosition.camera(withLatitude: coords.latitude, longitude: coords.longitude, zoom: 16.0)
+        let mapView = GMSMapView.map(withFrame: CGRect(x: 171, y: 133, width: 343, height: 265), camera: camera)
         self.view = mapView
         
         let marker = GMSMarker()
