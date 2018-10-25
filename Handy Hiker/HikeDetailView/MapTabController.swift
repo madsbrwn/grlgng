@@ -29,4 +29,14 @@ class MapTabController: UIViewController
             mapView.hikeName = self.hikeName
         }
     }
+    
+    @IBAction func OnClickNavBtn(_ sender: Any)
+    {
+        let coordsStr = String(coords.latitude) + "," + String(coords.longitude)
+        
+        UIApplication.shared.open(URL(string:"https://www.google.com/maps/dir/BYU,+Provo,+UT/'" + coordsStr + "'/@" + coordsStr + ",6z/")!, options: [:], completionHandler: {
+            (success) in
+            print(success)
+        })
+    }
 }

@@ -43,11 +43,11 @@ class HikesController: UIViewController, UITableViewDataSource
         for (hike) in hikes
         {
             names.append(hike.name)
-            times.append(buildTimeText(time: hike.totalMinutes))
+            times.append(sharedModel.buildTimeText(time: hike.totalMinutes))
             lengths.append(String(hike.trailLength))
         }
         
-        timeLimitUI.text = buildTimeText(time: minutes)
+        timeLimitUI.text = sharedModel.buildTimeText(time: minutes)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -79,31 +79,6 @@ class HikesController: UIViewController, UITableViewDataSource
             let selectedCell = sender as! TableViewCell
             hikeInfoView.hike = sharedModel.hikes[(selectedCell.HikeName?.text)!]
         }
-    }
-    
-    private func buildTimeText(time : Int) -> String
-    {
-        if (time == 0)
-        {
-            return "any time"
-        }
-        
-        let hrs = time / 60
-        let min = time % 60
-        
-        var str : String = ""
-        
-        if hrs != 0
-        {
-            str += String(hrs) + (hrs == 1 ? " hr " : " hrs ")
-        }
-        
-        if min != 0
-        {
-            str += String(min) + " min"
-        }
-        
-        return str
     }
     
     func callHikeFilter() {
