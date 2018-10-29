@@ -50,13 +50,15 @@ class HikeFilterView: YNDropDownView {
         self.initViews()
     }
     
-    
+    override func dropDownViewClosed() {
+        sharedModel.hikesController?.reloadHikes()
+    }
     
     @IBAction func onlyJeonseButtonClicked(_ sender: Any) {
     }
     @IBAction func confirmButtonClicked(_ sender: Any) {
         self.hideMenu()
-        HikesController().reloadHikes()
+//        HikesController().reloadHikes()
     }
     @IBAction func cancelButtonClicked(_ sender: Any) {
         sharedModel.filterByLength = 30

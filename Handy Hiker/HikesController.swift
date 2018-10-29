@@ -39,7 +39,7 @@ class HikesController: UIViewController, UITableViewDataSource
     
     override func viewDidLoad()
     {
-        
+        sharedModel.hikesController = self
         
         callHikeFilter()
         

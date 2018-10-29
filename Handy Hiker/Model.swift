@@ -48,6 +48,8 @@ class Model : NSObject
     var filterByLength : Float = 30
     var filterByDiff : Int = -1
     
+    var hikesController : HikesController?
+    
     var sortBy : String = "name"
     
     override init()
