@@ -98,7 +98,25 @@ class HikeSortView: YNDropDownView {
         
         super.init(frame: frame)
         self.backgroundColor = UIColor.white
+        
+
+        self.initViews()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        self.initViews()
+        print("init hike filter view")
+        print(sharedModel.sortBy)
+    }
+    override func dropDownViewClosed() {
+        sharedModel.hikesController?.reloadHikes()
+    }
+    
+    override func dropDownViewOpened() {
         let sortBy = sharedModel.sortBy
+        
         if (sortBy == "name"){
             nameSelected()
         }
@@ -114,17 +132,6 @@ class HikeSortView: YNDropDownView {
         else if (sortBy == "time"){
             timeSelected()
         }
-
-        self.initViews()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        
-        self.initViews()
-    }
-    override func dropDownViewClosed() {
-        sharedModel.hikesController?.reloadHikes()
     }
     @IBAction func nameButtonClicked(_ sender: Any) {
         print("Name button clicked")
