@@ -128,6 +128,9 @@ class HikeSortView: YNDropDownView {
         
         self.initViews()
     }
+    override func dropDownViewClosed() {
+        sharedModel.hikesController?.reloadHikes()
+    }
     @IBAction func nameButtonClicked(_ sender: Any) {
         nameSelected()
         sharedModel.sortBy = "name"
