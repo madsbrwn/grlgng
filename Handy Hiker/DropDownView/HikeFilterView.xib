@@ -162,7 +162,7 @@
                         <color key="titleColor" red="0.3411764706" green="0.61176470589999998" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
-                        <action selector="lengthButtonClicked:" destination="JSo-NK-jMn" eventType="touchUpInside" id="luC-zN-p2G"/>
+                        <action selector="lengthButtonClicked:" destination="JSo-NK-jMn" eventType="touchUpInside" id="qhw-Pd-soH"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLL-fQ-hgn">
@@ -217,8 +217,7 @@
                         <color key="titleColor" red="0.3411764706" green="0.61176470589999998" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
-                        <action selector="lengthButtonClicked:" destination="JSo-NK-jMn" eventType="touchUpInside" id="E7t-bg-MbE"/>
-                        <action selector="nameButtonClicked:" destination="JSo-NK-jMn" eventType="touchUpInside" id="IY4-L6-Ynd"/>
+                        <action selector="nameButtonClicked:" destination="JSo-NK-jMn" eventType="touchUpInside" id="8FN-pz-98M"/>
                     </connections>
                 </button>
             </subviews>
@@ -230,7 +229,7 @@
             <connections>
                 <outlet property="sortByDiff" destination="ybJ-Od-qbd" id="Qjs-yt-Cum"/>
                 <outlet property="sortByDistance" destination="fLL-fQ-hgn" id="0MB-TJ-xmL"/>
-                <outlet property="sortByLength" destination="P4a-BI-S5X" id="0TH-5B-2Pd"/>
+                <outlet property="sortByLength" destination="P4a-BI-S5X" id="1Y0-Ag-E5g"/>
                 <outlet property="sortByName" destination="2Oq-ae-jM6" id="bLo-2M-TxX"/>
                 <outlet property="sortByTime" destination="m9l-ZO-bYz" id="7AM-vl-Zhc"/>
             </connections>

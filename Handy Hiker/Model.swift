@@ -209,12 +209,12 @@ class Model : NSObject
         
         
         hike = HikeObject()
-        hike.name = "Grove Creek Canyon and Mahogany Ridge"
+        hike.name = "Grove Creek Canyon Trail"
         hike.coords = CLLocationCoordinate2D(latitude: 40.374726, longitude: -111.712174)
         hike.minutesFromBYU = 26
         hike.trailLength = 14.9
         hike.calculateTotalMinutes()
-        hike.description = "Grove Creek Canyon and Mahogany Ridge  is a 14.9 mile moderately trafficked out and back trail located near Pleasant Grove, Utah that features a great forest setting and is rated as moderate. The trail offers a number of activity options and is best used from April until September."
+        hike.description = "Grove Creek Canyon Trail is a 14.9 mile moderately trafficked out and back trail located near Pleasant Grove, Utah that features a great forest setting and is rated as moderate. The trail offers a number of activity options and is best used from April until September."
         hike.difficulty = 1
         
         hikes[hike.name] = hike
@@ -273,11 +273,12 @@ class Model : NSObject
         }
         if (sortBy == "name")
         {
+            print("sorting by name in model")
             filteredHikes.sort(by: {$0.name < $1.name})
         }
         else if (sortBy == "length")
         {
-            print("sort by length hoe")
+            print("Sorting by length in model")
             filteredHikes.sort(by: {$0.trailLength < $1.trailLength})
         }
         else if (sortBy == "dist")

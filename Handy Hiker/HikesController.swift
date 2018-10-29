@@ -20,6 +20,8 @@ class TableViewCell : UITableViewCell
     @IBOutlet weak var HikeTime: UILabel!
     @IBOutlet weak var HikeLength: UILabel!
     @IBOutlet weak var DriveTime: UILabel!
+    @IBOutlet weak var HikeDiff: UIImageView!
+    
 }
 
 class HikesController: UIViewController, UITableViewDataSource
@@ -58,26 +60,17 @@ class HikesController: UIViewController, UITableViewDataSource
         }
         
         timeLimitUI?.text = sharedModel.buildTimeText(time: minutes)
-        if (self.tableView == nil) {
-            print("Nil lol1111")
-        }
-        else {
-            print("not nil")
-        }
     }
     
     func reloadHikes()
     {
-//        loadView()
-        print("this got called")
         names.removeAll()
         times.removeAll()
         driveTimes.removeAll()
         lengths.removeAll()
         hikes = sharedModel.getHikesUnderTime(time: minutes)
-        
-//        self.hikes.sort(by: {$0.name < $1.name})
-        
+        print("when the hikes reload")
+        print(sharedModel.sortBy)
         for (hike) in hikes
         {
             names.append(hike.name)
@@ -85,53 +78,15 @@ class HikesController: UIViewController, UITableViewDataSource
             driveTimes.append(sharedModel.buildTimeText(time: hike.minutesFromBYU))
             lengths.append(String(hike.trailLength))
         }
-//        [self.tableView?.reloadData]
-//        while (self.tableView == nil) {
-//            print("Nil lol")
-//        }
-        let timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.updateCounting), userInfo: nil, repeats: true)
-        timer.invalidate()
+
         DispatchQueue.main.async{
             self.tableView?.reloadData()
         }
     }
-    
-    @objc func updateCounting(){
-        print("doing this")
-        if (self.tableView == nil) {
-            print("noooo")
-        }
-        DispatchQueue.main.async{
-            self.tableView?.reloadData()
-        }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        if (self.tableView == nil) {
-            print("wa Nil lol")
-        }
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        if (self.tableView == nil) {
-            print("wd Nil lol")
-        }
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        if (self.tableView == nil) {
-            print("dd Nil lol")
-        }
-    }
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        if (self.tableView == nil) {
-            print("1 Nil lol1111")
-        }
-        else {
-            print("1 not nil")
-        }
         return names.count
     }
     
@@ -147,12 +102,20 @@ class HikesController: UIViewController, UITableViewDataSource
         cell.DriveTime.text = driveTimes[indexPath.row]
         cell.HikeLength?.text = lengths[indexPath.row] + " mi"
         
-        if (self.tableView == nil) {
-            print("2 Nil lol1111")
+        cell.HikeName.numberOfLines = 1
+//        cell.HikeName.minimumScaleFactor = 3.0
+        cell.HikeName.adjustsFontSizeToFitWidth = true
+        
+        if (hikes[indexPath.row].difficulty == 0) {
+            cell.HikeDiff.image = #imageLiteral(resourceName: "easy")
         }
-        else {
-            print(" 2 not nil")
+        else if (hikes[indexPath.row].difficulty == 1) {
+            cell.HikeDiff.image = #imageLiteral(resourceName: "mediu")
         }
+        else if (hikes[indexPath.row].difficulty == 2) {
+            cell.HikeDiff.image = #imageLiteral(resourceName: "hard")
+        }
+        
         return cell
     }
 
@@ -164,12 +127,6 @@ class HikesController: UIViewController, UITableViewDataSource
             tableView?.deselectRow(at: indexPath, animated: true)
         }
         reloadHikes()
-        if (self.tableView == nil) {
-            print("view did appear and its Nil lol1111")
-        }
-        else {
-            print("view did appear not nil")
-        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
@@ -178,12 +135,6 @@ class HikesController: UIViewController, UITableViewDataSource
         {
             let selectedCell = sender as! TableViewCell
             hikeInfoView.hike = sharedModel.hikes[(selectedCell.HikeName?.text)!]
-        }
-        if (self.tableView == nil) {
-            print("4 Nil lol1111")
-        }
-        else {
-            print(" 4 not nil")
         }
     }
     
@@ -210,12 +161,6 @@ class HikesController: UIViewController, UITableViewDataSource
             view.setBackgroundColor(color: UIColor(red: 35.0 / 255.0, green: 61.0 / 255.0, blue: 77.0 / 255.0, alpha: 1.0))
             
             self.view.addSubview(view)
-        }
-        if (self.tableView == nil) {
-            print("5 Nil lol1111")
-        }
-        else {
-            print("5 not nil")
         }
     }
 }
