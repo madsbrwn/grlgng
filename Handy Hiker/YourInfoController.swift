@@ -10,8 +10,8 @@ import UIKit
 
 class YourInfoController: UIViewController, UITextFieldDelegate
 {
-    @IBOutlet weak var yourName: UITextField!
-    @IBOutlet weak var hikeSpeed: UISlider!
+//    @IBOutlet weak var yourName: UITextField!
+//    @IBOutlet weak var hikeSpeed: UISlider!
     @IBOutlet weak var hikesCompleted: UILabel!
     @IBOutlet weak var milesHiked: UILabel!
     @IBOutlet weak var timeSpentHiking: UILabel!
@@ -29,16 +29,16 @@ class YourInfoController: UIViewController, UITextFieldDelegate
         checkModel()
     }
     
-    @IBAction func sliderMoved(sender: UISlider) {
-        sender.setValue(Float(lroundf(hikeSpeed.value)), animated: true)
-    }
+//    @IBAction func sliderMoved(sender: UISlider) {
+//        sender.setValue(Float(lroundf(hikeSpeed.value)), animated: true)
+//    }
     
     func checkModel()
     {
-        hikeSpeed.setValue(userInfo.getSpeed(), animated: true)
+//        hikeSpeed.setValue(userInfo.getSpeed(), animated: true)
         
-        yourName.text = userInfo.getName()
-        yourName.delegate = self
+//        yourName.text = userInfo.getName()
+//        yourName.delegate = self
         
         hikesCompleted.text = String(userInfo.hikesCompleted)
         milesHiked.text = String(userInfo.milesHiked)
@@ -53,8 +53,8 @@ class YourInfoController: UIViewController, UITextFieldDelegate
     }
 
     @IBAction func endEdit(_ sender: Any) {
-        userInfo.setName(myname: yourName.text!)
-        userInfo.setSpeed(myspeed: hikeSpeed.value)
+//        userInfo.setName(myname: yourName.text!)
+//        userInfo.setSpeed(myspeed: hikeSpeed.value)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

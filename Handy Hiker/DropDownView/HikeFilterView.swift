@@ -14,6 +14,7 @@ class HikeFilterView: YNDropDownView {
     @IBOutlet weak var lengthSlider: UISlider?
 
     @IBOutlet weak var applyBtn: UIButton?
+    @IBOutlet weak var clearBtn: UIButton!
     
     @IBAction func indexChanged(_ sender: UISegmentedControl) {
         guard let diffPicker = diffPicker else {return}
@@ -58,6 +59,10 @@ class HikeFilterView: YNDropDownView {
         HikesController().reloadHikes()
     }
     @IBAction func cancelButtonClicked(_ sender: Any) {
+        sharedModel.filterByLength = 30
+        sharedModel.filterByDiff = -1
+        diffPicker?.selectedSegmentIndex = -1
+        lengthSlider?.setValue(Float(4), animated: true)
         self.hideMenu()
     }
     func initViews() {
