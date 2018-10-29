@@ -81,21 +81,65 @@ class HikeFilterView: YNDropDownView {
 }
 
 class HikeSortView: YNDropDownView {
-    
-    @IBOutlet weak var sortBy: UISegmentedControl!
-    
+    @IBOutlet var sortByLength: UIButton!{
+        didSet {
+            NSLog("sceneController set to %@", sortByLength);
+        }
+    }
+    @IBOutlet var sortByDistance: UIButton!
+    @IBOutlet var sortByDiff: UIButton!
+    @IBOutlet var sortByTime: UIButton!
+    @IBOutlet var sortByName: UIButton!
     
     override init(frame: CGRect) {
+        
         super.init(frame: frame)
         self.backgroundColor = UIColor.white
+        let sortBy = sharedModel.sortBy
+        if (sortBy == "name"){
+            print("this is it homei")
+            nameSelected()
+        }
+        else if (sortBy == "length"){
+            lengthSelected()
+        }
+        else if (sortBy == "dist"){
+            distSelected()
+        }
+        else if (sortBy == "diff"){
+            diffSelected()
+        }
+        else if (sortBy == "time"){
+            timeSelected()
+        }
+
         self.initViews()
-        sortBy.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI / 2.0));
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
         self.initViews()
+    }
+    @IBAction func nameButtonClicked(_ sender: Any) {
+        nameSelected()
+        sharedModel.sortBy = "name"
+    }
+    @IBAction func lengthButtonClicked(_ sender: Any) {
+        lengthSelected()
+        sharedModel.sortBy = "length"
+    }
+    @IBAction func distButtonClicked(_ sender: Any) {
+        distSelected()
+        sharedModel.sortBy = "dist"
+    }
+    @IBAction func diffButtonClicked(_ sender: Any) {
+        diffSelected()
+        sharedModel.sortBy = "diff"
+    }
+    @IBAction func timeButtonClicked(_ sender: Any) {
+        timeSelected()
+        sharedModel.sortBy = "time"
     }
     
     @IBAction func onlyJeonseButtonClicked(_ sender: Any) {
@@ -107,7 +151,66 @@ class HikeSortView: YNDropDownView {
         self.hideMenu()
     }
     func initViews() {
+
         
+
+    }
+    
+    func nameSelected() {
+        sortByLength.backgroundColor = UIColor.white
+        sortByDistance.backgroundColor = UIColor.white
+        sortByDiff.backgroundColor = UIColor.white
+        sortByTime.backgroundColor = UIColor.white
+        sortByName.backgroundColor = UIColor(red: 233/255, green: 233/255, blue: 233/255, alpha: 1)
+    }
+    
+    func lengthSelected() {
+//        normal()
+//        sortByLength.setTitleColor(.white, for: .normal)
+        sortByLength.backgroundColor = UIColor(red: 233/255, green: 233/255, blue: 233/255, alpha: 1)
+        sortByDistance.backgroundColor = UIColor.white
+        sortByDiff.backgroundColor = UIColor.white
+        sortByTime.backgroundColor = UIColor.white
+        sortByName.backgroundColor = UIColor.white
+    }
+    
+    func distSelected() {
+//        normal()
+//        sortByDistance.setTitleColor(.white, for: .normal)
+        sortByDistance.backgroundColor = UIColor(red: 233/255, green: 233/255, blue: 233/255, alpha: 1)
+        sortByLength.backgroundColor = UIColor.white
+        sortByDiff.backgroundColor = UIColor.white
+        sortByTime.backgroundColor = UIColor.white
+        sortByName.backgroundColor = UIColor.white
+    }
+    
+    func diffSelected() {
+//        normal()
+//        sortByDiff.setTitleColor(.white, for: .normal)
+        sortByDiff.backgroundColor = UIColor(red: 233/255, green: 233/255, blue: 233/255, alpha: 1)
+        sortByDistance.backgroundColor = UIColor.white
+        sortByLength.backgroundColor = UIColor.white
+        sortByTime.backgroundColor = UIColor.white
+        sortByName.backgroundColor = UIColor.white
+    }
+    
+    func timeSelected() {
+//        normal()
+//        sortByTime.setTitleColor(.white, for: .normal)
+        sortByTime.backgroundColor = UIColor(red: 233/255, green: 233/255, blue: 233/255, alpha: 1)
+        sortByDiff.backgroundColor = UIColor.white
+        sortByDistance.backgroundColor = UIColor.white
+        sortByLength.backgroundColor = UIColor.white
+        sortByName.backgroundColor = UIColor.white
+    }
+    
+    func normal() {
+        sortByLength.titleLabel?.textColor = UIColor(red: 87, green: 156, blue: 135, alpha: 1)
+        sortByTime.titleLabel?.textColor = UIColor(red: 87, green: 156, blue: 135, alpha: 1)
+        sortByDiff.titleLabel?.textColor = UIColor(red: 87, green: 156, blue: 135, alpha: 1)
+        sortByDistance.titleLabel?.textColor = UIColor(red: 87, green: 156, blue: 135, alpha: 1)
+        sortByLength.titleLabel?.textColor = UIColor(red: 87, green: 156, blue: 135, alpha: 1)
+        sortByName.titleLabel?.textColor = UIColor(red: 87, green: 156, blue: 135, alpha: 1)
     }
     
 }

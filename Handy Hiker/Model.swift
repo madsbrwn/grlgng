@@ -48,6 +48,8 @@ class Model : NSObject
     var filterByLength : Float = 30
     var filterByDiff : Int = -1
     
+    var sortBy : String = "name"
+    
     override init()
     {
         var hike = HikeObject()
@@ -244,17 +246,18 @@ class Model : NSObject
     
     public func getHikesUnderTime(time : Int) -> [HikeObject]
     {
-        
+        var new_time = time
         if (time == 0)
         {
-            return [HikeObject](hikes.values)
+            new_time  = 2000
+//            return [HikeObject](hikes.values)
         }
         
         var filteredHikes : [HikeObject] = []
         
         for (_, data) in hikes
         {
-            if (data.totalMinutes <= time && data.trailLength <= Double(filterByLength))
+            if (data.totalMinutes <= new_time && data.trailLength <= Double(filterByLength))
             {
                 if (filterByDiff == -1)
                 {
@@ -266,7 +269,27 @@ class Model : NSObject
                 }
             }
         }
-        
+        if (sortBy == "name")
+        {
+            filteredHikes.sort(by: {$0.name < $1.name})
+        }
+        else if (sortBy == "length")
+        {
+            print("sort by length hoe")
+            filteredHikes.sort(by: {$0.trailLength < $1.trailLength})
+        }
+        else if (sortBy == "dist")
+        {
+            filteredHikes.sort(by: {$0.minutesFromBYU < $1.minutesFromBYU})
+        }
+        else if (sortBy == "diff")
+        {
+            filteredHikes.sort(by: {$0.difficulty < $1.difficulty})
+        }
+        else if (sortBy == "time")
+        {
+            filteredHikes.sort(by: {$0.totalMinutes < $1.totalMinutes})
+        }
         return filteredHikes
     }
     

@@ -47,7 +47,7 @@ class HikesController: UIViewController, UITableViewDataSource
         
         hikes = sharedModel.getHikesUnderTime(time: minutes)
         
-        self.hikes.sort(by: {$0.name < $1.name})
+//        self.hikes.sort(by: {$0.name < $1.name})
         
         for (hike) in hikes
         {
@@ -76,7 +76,7 @@ class HikesController: UIViewController, UITableViewDataSource
         lengths.removeAll()
         hikes = sharedModel.getHikesUnderTime(time: minutes)
         
-        self.hikes.sort(by: {$0.name < $1.name})
+//        self.hikes.sort(by: {$0.name < $1.name})
         
         for (hike) in hikes
         {
