@@ -118,7 +118,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" bouncesZoom="NO" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" sectionIndexMinimumDisplayRowCount="1" rowHeight="85" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JrR-QE-6hF">
-                                <rect key="frame" x="0.0" y="212" width="375" height="406"/>
+                                <rect key="frame" x="0.0" y="204" width="375" height="414"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -632,17 +632,17 @@
         </scene>
     </scenes>
     <resources>
-        <image name="car" width="25.600000381469727" height="25.600000381469727"/>
-        <image name="check_outline" width="204.80000305175781" height="204.80000305175781"/>
-        <image name="clock" width="25.600000381469727" height="25.600000381469727"/>
-        <image name="compass" width="204.80000305175781" height="204.80000305175781"/>
-        <image name="hiker" width="25.600000381469727" height="25.600000381469727"/>
+        <image name="car" width="32" height="32"/>
+        <image name="check_outline" width="256" height="256"/>
+        <image name="clock" width="32" height="32"/>
+        <image name="compass" width="256" height="256"/>
+        <image name="hiker" width="32" height="32"/>
         <image name="hiker_girl_green" width="800" height="800"/>
-        <image name="person_filled" width="25.600000381469727" height="25.600000381469727"/>
-        <image name="person_outline" width="25.600000381469727" height="25.600000381469727"/>
-        <image name="timp" width="1105.9200439453125" height="737.280029296875"/>
-        <image name="tree_filled" width="25.600000381469727" height="25.600000381469727"/>
-        <image name="tree_outline" width="25.600000381469727" height="25.600000381469727"/>
+        <image name="person_filled" width="32" height="32"/>
+        <image name="person_outline" width="32" height="32"/>
+        <image name="timp" width="4608" height="3072"/>
+        <image name="tree_filled" width="32" height="32"/>
+        <image name="tree_outline" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="95n-m6-N9k"/>
