@@ -62,6 +62,7 @@ class Model : NSObject
         hike.calculateTotalMinutes()
         hike.description = "Mount Timpanogos offers views year round of spectacularly rugged terrain with outstanding glacial cirques, (the round, circular shaped valleys below the peaks) and moraines (masses of rocks, gravel, and sand deposited by glaciers). During the peak wildflower season which is late July and early August, this popular destination is a beautiful place to hike as a multitude of mountain wildflowers burst into colorful full bloom."
         hike.difficulty = 2
+        hike.image = #imageLiteral(resourceName: "timp")
         
         hikes["Mt. Timpanogos"] = hike
         
@@ -73,18 +74,18 @@ class Model : NSObject
         hike.calculateTotalMinutes()
         hike.description = "Bridal Veil Falls is a beautiful natural waterfall in scenic Provo Canyon. It's easily accessible via a trail that connects to the parking lot. The trail to the falls is open year-round, although accessibility may be limited in the winter months due to snow."
         hike.difficulty = 0
-        
+        hike.image = #imageLiteral(resourceName: "bridalveil")
         hikes["Bridal Veil Falls"] = hike
         
         hike = HikeObject()
         hike.name = "Y Mountain"
         hike.coords = CLLocationCoordinate2D(latitude: 40.244939, longitude: -111.627315)
         hike.minutesFromBYU = 5
-        hike.trailLength = 2.4
+        hike.trailLength = 6.3
         hike.calculateTotalMinutes()
         hike.description = "The \"Y\" Mountain Trail is a 6.3 mile moderately trafficked out and back trail located near Provo, Utah that features beautiful wild flowers and is rated as difficult. The trail offers a number of activity options and is accessible year-round. Dogs are also able to use this trail but must be kept on leash."
-        hike.difficulty = 1
-        
+        hike.difficulty = 2
+        hike.image = #imageLiteral(resourceName: "ymountain")
         hikes["Y Mountain"] = hike
         
         hike = HikeObject()
@@ -95,6 +96,7 @@ class Model : NSObject
         hike.calculateTotalMinutes()
         hike.description = "Stewart Falls is one of the most scenic and photogenic waterfalls in northern Utah. It falls in two tiers and is over 200 feet tall. It is a moderate hike through a beautiful forest on the east side of Mt Timpanogos. The trail is well marked and easy to follow. The descent from the ridge down to the base of the falls is quite steep (youngsters should be held in check at that point) but this is a great family hike. Summer is a good time to make the trek, and fall is even better because colored leaves are magnificent. "
         hike.difficulty = 1
+        hike.image = #imageLiteral(resourceName: "stewart")
         
         hikes["Stewart Falls"] = hike
         
@@ -106,6 +108,7 @@ class Model : NSObject
         hike.calculateTotalMinutes()
         hike.description = "Squaw Peak Trail is a 7 mile moderately trafficked out and back trail located near Provo, Utah that features a river and is rated as difficult. The trail offers a number of activity options and is best used from March until October. Dogs are also able to use this trail but must be kept on leash."
         hike.difficulty = 2
+        hike.image = #imageLiteral(resourceName: "squaw")
         
         hikes[hike.name] = hike
         
@@ -119,6 +122,7 @@ class Model : NSObject
         hike.calculateTotalMinutes()
         hike.description = "Rock Canyon Trail is a 5.5 mile heavily trafficked out and back trail located near Provo, Utah that features a river and is rated as moderate. The trail offers a number of activity options and is accessible year-round. Dogs are also able to use this trail."
         hike.difficulty = 1
+        hike.image = #imageLiteral(resourceName: "rockcanyon")
         
         hikes[hike.name] = hike
         
@@ -131,6 +135,7 @@ class Model : NSObject
         hike.calculateTotalMinutes()
         hike.description = "Buffalo Peak Trail is a 0.9 mile moderately trafficked out and back trail located near Provo, Utah that features beautiful wild flowers and is rated as moderate. The trail is primarily used for hiking and is best used from May until October. Dogs are also able to use this trail but must be kept on leash."
         hike.difficulty = 1
+        hike.image = #imageLiteral(resourceName: "buffalopeak")
         
         hikes[hike.name] = hike
         
@@ -143,6 +148,7 @@ class Model : NSObject
         hike.calculateTotalMinutes()
         hike.description = "Big Springs Hollow Trail is a 4.2 mile moderately trafficked out and back trail located near Provo, Utah that features beautiful wild flowers and is good for all skill levels. The trail offers a number of activity options and is accessible year-round. Dogs are also able to use this trail but must be kept on leash."
         hike.difficulty = 0
+        hike.image = #imageLiteral(resourceName: "bigspringshollow")
         
         hikes[hike.name] = hike
         
@@ -156,6 +162,7 @@ class Model : NSObject
         hike.calculateTotalMinutes()
         hike.description = "Slate Canyon Loop Trail is a 8.5 mile lightly trafficked loop trail located near Provo, Utah that features a river and is rated as difficult. The trail offers a number of activity options and is best used from April until October. Horses are also able to use this trail."
         hike.difficulty = 2
+        hike.image = #imageLiteral(resourceName: "slatecanyon")
         
         hikes[hike.name] = hike
         
@@ -168,6 +175,7 @@ class Model : NSObject
         hike.calculateTotalMinutes()
         hike.description = "Battle Creek Falls Trail is a 4.1 mile heavily trafficked out and back trail located near Pleasant Grove, Utah that features a waterfall and is rated as moderate. The trail offers a number of activity options and is best used from March until October. Dogs are also able to use this trail."
         hike.difficulty = 1
+        hike.image = #imageLiteral(resourceName: "battlecreek")
         
         hikes[hike.name] = hike
         
@@ -179,6 +187,7 @@ class Model : NSObject
         hike.calculateTotalMinutes()
         hike.description = "Cascade Saddle Trail is a 10.5 mile moderately trafficked out and back trail located near Provo, Utah that features beautiful wild flowers and is only recommended for very experienced adventurers. The trail is primarily used for hiking, walking, nature trips, and birding and is best used from July until October."
         hike.difficulty = 2
+        hike.image = #imageLiteral(resourceName: "cascadesaddle")
         
         hikes[hike.name] = hike
         
@@ -192,6 +201,7 @@ class Model : NSObject
         hike.calculateTotalMinutes()
         hike.description = "North Fork Ridge Trail is a 3.9 mile out and back trail located near Provo, Utah that features a great forest setting. The trail is rated as moderate and primarily used for hiking, walking, trail running, and nature trips. Dogs are also able to use this trail."
         hike.difficulty = 1
+        hike.image = #imageLiteral(resourceName: "northfork")
         
         hikes[hike.name] = hike
         
@@ -204,7 +214,7 @@ class Model : NSObject
         hike.calculateTotalMinutes()
         hike.description = "Dripping Rock Falls is a 0.7 mile moderately trafficked out and back trail located near Spanish Fork, Utah that features a waterfall and is good for all skill levels. The trail is primarily used for hiking, walking, nature trips, and birding and is best used from April until October. Dogs are also able to use this trail but must be kept on leash."
         hike.difficulty = 0
-        
+        hike.image = #imageLiteral(resourceName: "drippingrock")
         hikes[hike.name] = hike
         
         
@@ -216,6 +226,7 @@ class Model : NSObject
         hike.calculateTotalMinutes()
         hike.description = "Grove Creek Canyon Trail is a 14.9 mile moderately trafficked out and back trail located near Pleasant Grove, Utah that features a great forest setting and is rated as moderate. The trail offers a number of activity options and is best used from April until September."
         hike.difficulty = 1
+        hike.image = #imageLiteral(resourceName: "grovecreek")
         
         hikes[hike.name] = hike
 
@@ -338,6 +349,7 @@ class Model : NSObject
         var completed : Bool = false
         var difficulty : Int = 1
         let diffFactors = [0.75, 1, 1.5]
+        var image : UIImage = #imageLiteral(resourceName: "slatecanyon")
         
         func calculateTotalMinutes()
         {

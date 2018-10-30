@@ -34,6 +34,7 @@ class HikeDetailController:UIViewController
         UITime.text = buildTimeText(time: hike?.totalMinutes ?? 0)
         UIDiff.layer.cornerRadius = 3
         UIDiff.clipsToBounds = true
+        UIImage.image = hike?.image
         setDiff()
     }
     
